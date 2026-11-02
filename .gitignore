@@ -1,0 +1,6 @@
+.venv/
+data/
+.ipynb_checkpoints/
+papers/
+tmp/
+.DS_Store
