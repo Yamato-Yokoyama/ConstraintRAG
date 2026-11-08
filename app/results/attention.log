@@ -1,0 +1,14 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 58280.66it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/yyyyy/Mahoroba/constraintrag/app/src/vision/attention.py", line 47, in <module>
+    main(sys.argv[1:])
+  File "/Users/yyyyy/Mahoroba/constraintrag/app/src/vision/attention.py", line 35, in main
+    image = Image.open(image_path(product_id)).convert("RGB")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yyyyy/home/nlp/Personal/langchain-rag-explorer/.venv/lib/python3.11/site-packages/PIL/Image.py", line 3639, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../data/sqid/images/B082PMXT2S B096TNT52L B07Y8CT1W9 B07QN597N6 B08QCWCM6V B08MZQ5GTP.jpg'

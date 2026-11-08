@@ -1,0 +1,311 @@
+{
+  "summary": {
+    "ndcg_before": 0.3280056148649293,
+    "ndcg_after": 0.34773824076647913,
+    "trap_before": 0.66,
+    "trap_after": 0.605,
+    "removed": 5.7
+  },
+  "queries": [
+    {
+      "query_id": 447,
+      "query": "0.5 pens fine point black not gel",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "gel"
+        ]
+      },
+      "ndcg_before": 0.2576893780329553,
+      "ndcg_after": 0.2642555134509754,
+      "trap_before": 0.7,
+      "trap_after": 0.7,
+      "removed": 3
+    },
+    {
+      "query_id": 1400,
+      "query": "100 headset without micrphone",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "microphone"
+        ]
+      },
+      "ndcg_before": 0.018309015026019854,
+      "ndcg_after": 0.018309015026019854,
+      "trap_before": 0.6,
+      "trap_after": 0.6,
+      "removed": 6
+    },
+    {
+      "query_id": 1435,
+      "query": "100 watt folding solar panel without charge controller",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "controller"
+        ]
+      },
+      "ndcg_before": 0.4238040257093449,
+      "ndcg_after": 0.4108340237081343,
+      "trap_before": 0.4,
+      "trap_after": 0.3,
+      "removed": 2
+    },
+    {
+      "query_id": 1509,
+      "query": "100w solar panel without controller",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "controller"
+        ]
+      },
+      "ndcg_before": 0.6745472633690242,
+      "ndcg_after": 0.6780154928503842,
+      "trap_before": 0.4,
+      "trap_after": 0.4,
+      "removed": 2
+    },
+    {
+      "query_id": 7752,
+      "query": "alarm clock without snooze",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "snooze"
+        ]
+      },
+      "ndcg_before": 0.39160501933196834,
+      "ndcg_after": 0.39160501933196834,
+      "trap_before": 1.0,
+      "trap_after": 1.0,
+      "removed": 0
+    },
+    {
+      "query_id": 14476,
+      "query": "bed desk without cup holder",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "cup holder"
+        ]
+      },
+      "ndcg_before": 0.13576594374196443,
+      "ndcg_after": 0.13576594374196443,
+      "trap_before": 0.9,
+      "trap_after": 0.9,
+      "removed": 4
+    },
+    {
+      "query_id": 23909,
+      "query": "cat treats without chicken",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "chicken"
+        ]
+      },
+      "ndcg_before": 0.5670719464583928,
+      "ndcg_after": 0.48743404399436835,
+      "trap_before": 0.7,
+      "trap_after": 0.8,
+      "removed": 17
+    },
+    {
+      "query_id": 28603,
+      "query": "contigo without straw",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "straw"
+        ]
+      },
+      "ndcg_before": 0.12193524336297425,
+      "ndcg_after": 0.11700114716354404,
+      "trap_before": 0.2,
+      "trap_after": 0.2,
+      "removed": 1
+    },
+    {
+      "query_id": 40132,
+      "query": "fidget pack without pop it",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "pop it"
+        ]
+      },
+      "ndcg_before": 0.5648456913210967,
+      "ndcg_after": 0.5648456913210967,
+      "trap_before": 0.3,
+      "trap_after": 0.3,
+      "removed": 0
+    },
+    {
+      "query_id": 42300,
+      "query": "fountain pen without cartridge",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "cartridge"
+        ]
+      },
+      "ndcg_before": 0.6607222247381963,
+      "ndcg_after": 0.6607222247381963,
+      "trap_before": 0.3,
+      "trap_after": 0.3,
+      "removed": 1
+    },
+    {
+      "query_id": 45968,
+      "query": "glider without ottoman",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "ottoman"
+        ]
+      },
+      "ndcg_before": 0.37532149338049015,
+      "ndcg_after": 0.7710836935125231,
+      "trap_before": 1.0,
+      "trap_after": 0.5,
+      "removed": 9
+    },
+    {
+      "query_id": 49760,
+      "query": "headphones not wireless",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "wireless"
+        ]
+      },
+      "ndcg_before": 0.030963660288809834,
+      "ndcg_after": 0.04141669967609805,
+      "trap_before": 0.8,
+      "trap_after": 0.7,
+      "removed": 7
+    },
+    {
+      "query_id": 59940,
+      "query": "laptop not chromebook",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "chromebook"
+        ]
+      },
+      "ndcg_before": 0.019228612724337114,
+      "ndcg_after": 0.024263807775374013,
+      "trap_before": 1.0,
+      "trap_after": 1.0,
+      "removed": 1
+    },
+    {
+      "query_id": 71987,
+      "query": "n95 not kn95 masks",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "kn95"
+        ]
+      },
+      "ndcg_before": 0.1621350910289169,
+      "ndcg_after": 0.1621350910289169,
+      "trap_before": 0.9,
+      "trap_after": 0.9,
+      "removed": 0
+    },
+    {
+      "query_id": 75456,
+      "query": "olive oil not extra virgin",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "extra virgin"
+        ]
+      },
+      "ndcg_before": 0.06438055358722923,
+      "ndcg_after": 0.06438055358722923,
+      "trap_before": 1.0,
+      "trap_after": 1.0,
+      "removed": 2
+    },
+    {
+      "query_id": 77730,
+      "query": "paper shredder without basket",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "basket"
+        ]
+      },
+      "ndcg_before": 0.7414855180760758,
+      "ndcg_after": 0.7414855180760758,
+      "trap_before": 0.6,
+      "trap_after": 0.6,
+      "removed": 0
+    },
+    {
+      "query_id": 78323,
+      "query": "pc headset without microphone",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "microphone"
+        ]
+      },
+      "ndcg_before": 0.3059967739214748,
+      "ndcg_after": 0.1385757553221739,
+      "trap_before": 0.6,
+      "trap_after": 0.6,
+      "removed": 7
+    },
+    {
+      "query_id": 95852,
+      "query": "solar lights not motion sensor",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "motion"
+        ]
+      },
+      "ndcg_before": 0.33259474594542077,
+      "ndcg_after": 0.3907848256528501,
+      "trap_before": 1.0,
+      "trap_after": 1.0,
+      "removed": 20
+    },
+    {
+      "query_id": 99719,
+      "query": "sweatshirt without hood for men",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "hood"
+        ]
+      },
+      "ndcg_before": 0.31488013066763093,
+      "ndcg_after": 0.31488013066763093,
+      "trap_before": 0.4,
+      "trap_after": 0.2,
+      "removed": 14
+    },
+    {
+      "query_id": 115782,
+      "query": "zippered sweatshirt without hood mens",
+      "constraints": {
+        "include": [],
+        "exclude": [
+          "hood"
+        ]
+      },
+      "ndcg_before": 0.39682996658626307,
+      "ndcg_after": 0.5769706247040591,
+      "trap_before": 0.4,
+      "trap_after": 0.1,
+      "removed": 18
+    }
+  ]
+}

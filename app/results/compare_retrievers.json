@@ -1,0 +1,1079 @@
+{
+  "summary": {
+    "tfidf": {
+      "ndcg_negated": 0.2841978202498264,
+      "ndcg_plain": 0.43861624091775886,
+      "trap@10": 0.705,
+      "mann_whitney_p_negated_vs_plain": 0.08579606601557892
+    },
+    "bm25": {
+      "ndcg_negated": 0.2871765958229365,
+      "ndcg_plain": 0.485495175039397,
+      "trap@10": 0.76,
+      "mann_whitney_p_negated_vs_plain": 0.0360134685411744
+    },
+    "dense": {
+      "ndcg_negated": 0.3280056148649292,
+      "ndcg_plain": 0.5683504918684734,
+      "trap@10": 0.6599999999999999,
+      "mann_whitney_p_negated_vs_plain": 0.008354827335644516
+    },
+    "hybrid": {
+      "ndcg_negated": 0.3089303018253269,
+      "ndcg_plain": 0.5565100722053813,
+      "trap@10": 0.7650000000000001,
+      "mann_whitney_p_negated_vs_plain": 0.0023412726074935374
+    }
+  },
+  "paired": {
+    "tfidf_vs_dense_negated_wilcoxon_p": 0.1893482208251953,
+    "tfidf_vs_dense_plain_wilcoxon_p": 0.005580902099609375,
+    "bm25_vs_dense_negated_wilcoxon_p": 0.26109886169433594,
+    "bm25_vs_dense_plain_wilcoxon_p": 0.06460709553744196,
+    "hybrid_vs_dense_negated_wilcoxon_p": 0.47490501403808594,
+    "hybrid_vs_dense_plain_wilcoxon_p": 0.8123550415039062
+  },
+  "note": "n=20 per group; p values are not corrected for multiple comparisons",
+  "rows": [
+    {
+      "query_id": 71987,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.4731081084201375,
+      "trap@10": 0.9
+    },
+    {
+      "query_id": 71987,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.32713509257645335,
+      "trap@10": 0.8
+    },
+    {
+      "query_id": 71987,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.1621350910289169,
+      "trap@10": 0.9
+    },
+    {
+      "query_id": 71987,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.26087905385085186,
+      "trap@10": 0.9
+    },
+    {
+      "query_id": 23909,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.29300035995568136,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 23909,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.24716731752366897,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 23909,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.5670719464583928,
+      "trap@10": 0.7
+    },
+    {
+      "query_id": 23909,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.27286024171673784,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 115782,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.0872501664867155,
+      "trap@10": 0.6
+    },
+    {
+      "query_id": 115782,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.12393212753639553,
+      "trap@10": 0.7
+    },
+    {
+      "query_id": 115782,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.39682996658626307,
+      "trap@10": 0.4
+    },
+    {
+      "query_id": 115782,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.23389671101374984,
+      "trap@10": 0.6
+    },
+    {
+      "query_id": 1435,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.05248417536172975,
+      "trap@10": 0.6
+    },
+    {
+      "query_id": 1435,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.08812081769369505,
+      "trap@10": 0.8
+    },
+    {
+      "query_id": 1435,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.4238040257093449,
+      "trap@10": 0.4
+    },
+    {
+      "query_id": 1435,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.18737324679558437,
+      "trap@10": 0.7
+    },
+    {
+      "query_id": 59940,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.0,
+      "trap@10": 0.6
+    },
+    {
+      "query_id": 59940,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.0,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 59940,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.019228612724337114,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 59940,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.012819075149558075,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 40132,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.49783829846010696,
+      "trap@10": 0.1
+    },
+    {
+      "query_id": 40132,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.36549833284538785,
+      "trap@10": 0.1
+    },
+    {
+      "query_id": 40132,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.5648456913210967,
+      "trap@10": 0.3
+    },
+    {
+      "query_id": 40132,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.5192683873761783,
+      "trap@10": 0.3
+    },
+    {
+      "query_id": 1509,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.6445221581521278,
+      "trap@10": 0.4
+    },
+    {
+      "query_id": 1509,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.5675907758538048,
+      "trap@10": 0.5
+    },
+    {
+      "query_id": 1509,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.6745472633690242,
+      "trap@10": 0.4
+    },
+    {
+      "query_id": 1509,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.5743251307722733,
+      "trap@10": 0.6
+    },
+    {
+      "query_id": 1400,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.0,
+      "trap@10": 0.4
+    },
+    {
+      "query_id": 1400,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.0,
+      "trap@10": 0.3
+    },
+    {
+      "query_id": 1400,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.018309015026019854,
+      "trap@10": 0.6
+    },
+    {
+      "query_id": 1400,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.0,
+      "trap@10": 0.5
+    },
+    {
+      "query_id": 78323,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.13481567704837505,
+      "trap@10": 0.8
+    },
+    {
+      "query_id": 78323,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.018502349131965648,
+      "trap@10": 0.9
+    },
+    {
+      "query_id": 78323,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.3059967739214748,
+      "trap@10": 0.6
+    },
+    {
+      "query_id": 78323,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.13600399991567805,
+      "trap@10": 0.8
+    },
+    {
+      "query_id": 99719,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.2153725261029808,
+      "trap@10": 0.6
+    },
+    {
+      "query_id": 99719,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.27874530007907994,
+      "trap@10": 0.8
+    },
+    {
+      "query_id": 99719,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.31488013066763093,
+      "trap@10": 0.4
+    },
+    {
+      "query_id": 99719,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.297968938279998,
+      "trap@10": 0.7
+    },
+    {
+      "query_id": 28603,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.14121749499950892,
+      "trap@10": 0.8
+    },
+    {
+      "query_id": 28603,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.2663842048911575,
+      "trap@10": 0.7
+    },
+    {
+      "query_id": 28603,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.12193524336297425,
+      "trap@10": 0.2
+    },
+    {
+      "query_id": 28603,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.19909633412010733,
+      "trap@10": 0.5
+    },
+    {
+      "query_id": 7752,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.5050582430464544,
+      "trap@10": 0.8
+    },
+    {
+      "query_id": 7752,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.4754445216310028,
+      "trap@10": 0.9
+    },
+    {
+      "query_id": 7752,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.39160501933196834,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 7752,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.48428638185562606,
+      "trap@10": 0.9
+    },
+    {
+      "query_id": 42300,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.6254910682234189,
+      "trap@10": 0.0
+    },
+    {
+      "query_id": 42300,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.6083572954998402,
+      "trap@10": 0.2
+    },
+    {
+      "query_id": 42300,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.6607222247381963,
+      "trap@10": 0.3
+    },
+    {
+      "query_id": 42300,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.686402951561842,
+      "trap@10": 0.4
+    },
+    {
+      "query_id": 14476,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.15501731047369005,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 14476,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.22322284814082452,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 14476,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.13576594374196443,
+      "trap@10": 0.9
+    },
+    {
+      "query_id": 14476,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.16520501668939389,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 95852,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.15221085811464033,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 95852,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.1554419460285854,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 95852,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.33259474594542077,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 95852,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.360651230461947,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 49760,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.5054756476883523,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 49760,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.5851635432972558,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 49760,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.030963660288809834,
+      "trap@10": 0.8
+    },
+    {
+      "query_id": 49760,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.4072928859442734,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 45968,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.3792855684045504,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 45968,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.4124156737854285,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 45968,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.37532149338049015,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 45968,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.38519438761129443,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 77730,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.6605891673567075,
+      "trap@10": 0.5
+    },
+    {
+      "query_id": 77730,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.7146290681440147,
+      "trap@10": 0.5
+    },
+    {
+      "query_id": 77730,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.7414855180760758,
+      "trap@10": 0.6
+    },
+    {
+      "query_id": 77730,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.7241235540137247,
+      "trap@10": 0.5
+    },
+    {
+      "query_id": 75456,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.13746122586078183,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 75456,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.12307482030065896,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 75456,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.06438055358722923,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 75456,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.0460682266303433,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 447,
+      "group": "negated",
+      "model": "tfidf",
+      "ndcg@10": 0.02375835084056881,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 447,
+      "group": "negated",
+      "model": "bm25",
+      "ndcg@10": 0.16270588149950985,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 447,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.2576893780329553,
+      "trap@10": 0.7
+    },
+    {
+      "query_id": 447,
+      "group": "negated",
+      "model": "hybrid",
+      "ndcg@10": 0.22489028274737663,
+      "trap@10": 0.9
+    },
+    {
+      "query_id": 41100,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.7177003165429632
+    },
+    {
+      "query_id": 41100,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.8103020898263307
+    },
+    {
+      "query_id": 41100,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.9367673632754434
+    },
+    {
+      "query_id": 41100,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.8103020898263307
+    },
+    {
+      "query_id": 75709,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.17818192503245675
+    },
+    {
+      "query_id": 75709,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.40315541587420345
+    },
+    {
+      "query_id": 75709,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.2199620482824775
+    },
+    {
+      "query_id": 75709,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.3717183365776541
+    },
+    {
+      "query_id": 30104,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.4624453086093292
+    },
+    {
+      "query_id": 30104,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.45436090889504
+    },
+    {
+      "query_id": 30104,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.6472588217382083
+    },
+    {
+      "query_id": 30104,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.5509929965490601
+    },
+    {
+      "query_id": 94688,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.9268004454670857
+    },
+    {
+      "query_id": 94688,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.9564298566387673
+    },
+    {
+      "query_id": 94688,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.5748330137895973
+    },
+    {
+      "query_id": 94688,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.7334011721704158
+    },
+    {
+      "query_id": 56898,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.6862690529597623
+    },
+    {
+      "query_id": 56898,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.8646698244447418
+    },
+    {
+      "query_id": 56898,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.8714545868221136
+    },
+    {
+      "query_id": 56898,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.7823834044636369
+    },
+    {
+      "query_id": 13411,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.06943122193677727
+    },
+    {
+      "query_id": 13411,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.14201905717762703
+    },
+    {
+      "query_id": 13411,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.6547216238913564
+    },
+    {
+      "query_id": 13411,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.4697557950008693
+    },
+    {
+      "query_id": 48129,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.23428701612509487
+    },
+    {
+      "query_id": 48129,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.29025662745585107
+    },
+    {
+      "query_id": 48129,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.7191184989488184
+    },
+    {
+      "query_id": 48129,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.29943791892045096
+    },
+    {
+      "query_id": 50118,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.7713103870774881
+    },
+    {
+      "query_id": 50118,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.8573436642331171
+    },
+    {
+      "query_id": 50118,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.8738911120579488
+    },
+    {
+      "query_id": 50118,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.9375119002569003
+    },
+    {
+      "query_id": 31053,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.5473983622993502
+    },
+    {
+      "query_id": 31053,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.5607686333077346
+    },
+    {
+      "query_id": 31053,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.7235191413530525
+    },
+    {
+      "query_id": 31053,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.8275947830665039
+    },
+    {
+      "query_id": 71218,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.19208011069409014
+    },
+    {
+      "query_id": 71218,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.5663787452199632
+    },
+    {
+      "query_id": 71218,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.4894526204699377
+    },
+    {
+      "query_id": 71218,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.8017518974543586
+    },
+    {
+      "query_id": 5043,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.8630152897016883
+    },
+    {
+      "query_id": 5043,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.8263333286520083
+    },
+    {
+      "query_id": 5043,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.826813366651774
+    },
+    {
+      "query_id": 5043,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.8389574121760602
+    },
+    {
+      "query_id": 96432,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.3846328790935661
+    },
+    {
+      "query_id": 96432,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.13252109214445024
+    },
+    {
+      "query_id": 96432,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.4983531543597976
+    },
+    {
+      "query_id": 96432,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.211541830606673
+    },
+    {
+      "query_id": 75831,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.12579354882082558
+    },
+    {
+      "query_id": 75831,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.0930910454035164
+    },
+    {
+      "query_id": 75831,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.0
+    },
+    {
+      "query_id": 75831,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.3101443281334098
+    },
+    {
+      "query_id": 108075,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.4287016440601585
+    },
+    {
+      "query_id": 108075,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.4200233995428054
+    },
+    {
+      "query_id": 108075,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.6588384764235892
+    },
+    {
+      "query_id": 108075,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.45258421554313316
+    },
+    {
+      "query_id": 101719,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.47066647313200677
+    },
+    {
+      "query_id": 101719,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.391645734669784
+    },
+    {
+      "query_id": 101719,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.47557011408718985
+    },
+    {
+      "query_id": 101719,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.46152118736659864
+    },
+    {
+      "query_id": 114182,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.18071546470095853
+    },
+    {
+      "query_id": 114182,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.22478954420496228
+    },
+    {
+      "query_id": 114182,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.23897213284442367
+    },
+    {
+      "query_id": 114182,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.3162687551063665
+    },
+    {
+      "query_id": 36265,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.0
+    },
+    {
+      "query_id": 36265,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.0
+    },
+    {
+      "query_id": 36265,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.038367902601808127
+    },
+    {
+      "query_id": 36265,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.01840220271997087
+    },
+    {
+      "query_id": 35391,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.4784789297576299
+    },
+    {
+      "query_id": 35391,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.46474716285608947
+    },
+    {
+      "query_id": 35391,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.46474716285608947
+    },
+    {
+      "query_id": 35391,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.4784789297576299
+    },
+    {
+      "query_id": 90935,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.1964354995215712
+    },
+    {
+      "query_id": 90935,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.5675291856250766
+    },
+    {
+      "query_id": 90935,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.5395118145574667
+    },
+    {
+      "query_id": 90935,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.6337523950150327
+    },
+    {
+      "query_id": 102507,
+      "group": "plain",
+      "model": "tfidf",
+      "ndcg@10": 0.857980942822373
+    },
+    {
+      "query_id": 102507,
+      "group": "plain",
+      "model": "bm25",
+      "ndcg@10": 0.6835381846158709
+    },
+    {
+      "query_id": 102507,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.914856882358379
+    },
+    {
+      "query_id": 102507,
+      "group": "plain",
+      "model": "hybrid",
+      "ndcg@10": 0.8236998933965709
+    }
+  ]
+}

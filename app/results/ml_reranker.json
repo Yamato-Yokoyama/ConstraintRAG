@@ -1,0 +1,541 @@
+{
+  "summary": {
+    "dense": {
+      "ndcg_negated": 0.3280056148649292,
+      "ndcg_plain": 0.5683504918684734,
+      "trap@10": 0.6599999999999999
+    },
+    "logreg": {
+      "ndcg_negated": 0.2975873932576236,
+      "ndcg_plain": 0.3458871899419955,
+      "trap@10": 0.6250000000000001
+    },
+    "wilcoxon_p": {
+      "ndcg_negated": 0.4523754119873047,
+      "ndcg_plain": 0.0003223419189453125,
+      "trap": 0.5235111258123113
+    }
+  },
+  "rows": [
+    {
+      "query_id": 71987,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.1621350910289169,
+      "trap@10": 0.9
+    },
+    {
+      "query_id": 71987,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.28472320729939143,
+      "trap@10": 0.9
+    },
+    {
+      "query_id": 23909,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.5670719464583928,
+      "trap@10": 0.7
+    },
+    {
+      "query_id": 23909,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.2614224314107028,
+      "trap@10": 0.8
+    },
+    {
+      "query_id": 115782,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.39682996658626307,
+      "trap@10": 0.4
+    },
+    {
+      "query_id": 115782,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.260558797040055,
+      "trap@10": 0.5
+    },
+    {
+      "query_id": 1435,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.4238040257093449,
+      "trap@10": 0.4
+    },
+    {
+      "query_id": 1435,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.06315888741124231,
+      "trap@10": 0.6
+    },
+    {
+      "query_id": 59940,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.019228612724337114,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 59940,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.11576778410063149,
+      "trap@10": 0.9
+    },
+    {
+      "query_id": 40132,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.5648456913210967,
+      "trap@10": 0.3
+    },
+    {
+      "query_id": 40132,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.46034604151078456,
+      "trap@10": 0.2
+    },
+    {
+      "query_id": 1509,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.6745472633690242,
+      "trap@10": 0.4
+    },
+    {
+      "query_id": 1509,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.5621458821372466,
+      "trap@10": 0.6
+    },
+    {
+      "query_id": 1400,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.018309015026019854,
+      "trap@10": 0.6
+    },
+    {
+      "query_id": 1400,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.0,
+      "trap@10": 0.1
+    },
+    {
+      "query_id": 78323,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.3059967739214748,
+      "trap@10": 0.6
+    },
+    {
+      "query_id": 78323,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.009201101359985435,
+      "trap@10": 0.4
+    },
+    {
+      "query_id": 99719,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.31488013066763093,
+      "trap@10": 0.4
+    },
+    {
+      "query_id": 99719,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.3408401298059212,
+      "trap@10": 0.7
+    },
+    {
+      "query_id": 28603,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.12193524336297425,
+      "trap@10": 0.2
+    },
+    {
+      "query_id": 28603,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.022009176629808017,
+      "trap@10": 0.1
+    },
+    {
+      "query_id": 7752,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.39160501933196834,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 7752,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.6802787691495936,
+      "trap@10": 0.9
+    },
+    {
+      "query_id": 42300,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.6607222247381963,
+      "trap@10": 0.3
+    },
+    {
+      "query_id": 42300,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.9363792118010483,
+      "trap@10": 0.0
+    },
+    {
+      "query_id": 14476,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.13576594374196443,
+      "trap@10": 0.9
+    },
+    {
+      "query_id": 14476,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.16292005955402025,
+      "trap@10": 0.9
+    },
+    {
+      "query_id": 95852,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.33259474594542077,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 95852,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.1292589913241418,
+      "trap@10": 0.8
+    },
+    {
+      "query_id": 49760,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.030963660288809834,
+      "trap@10": 0.8
+    },
+    {
+      "query_id": 49760,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.09201101359985435,
+      "trap@10": 0.9
+    },
+    {
+      "query_id": 45968,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.37532149338049015,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 45968,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.2483022601121106,
+      "trap@10": 0.8
+    },
+    {
+      "query_id": 77730,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.7414855180760758,
+      "trap@10": 0.6
+    },
+    {
+      "query_id": 77730,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.8591137003041831,
+      "trap@10": 0.4
+    },
+    {
+      "query_id": 75456,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.06438055358722923,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 75456,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.2452347191419087,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 447,
+      "group": "negated",
+      "model": "dense",
+      "ndcg@10": 0.2576893780329553,
+      "trap@10": 0.7
+    },
+    {
+      "query_id": 447,
+      "group": "negated",
+      "model": "logreg",
+      "ndcg@10": 0.21807570145984323,
+      "trap@10": 1.0
+    },
+    {
+      "query_id": 41100,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.9367673632754434
+    },
+    {
+      "query_id": 41100,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.6927944475708604
+    },
+    {
+      "query_id": 75709,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.2199620482824775
+    },
+    {
+      "query_id": 75709,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.08576765913210421
+    },
+    {
+      "query_id": 30104,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.6472588217382083
+    },
+    {
+      "query_id": 30104,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.6023519320125986
+    },
+    {
+      "query_id": 94688,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.5748330137895973
+    },
+    {
+      "query_id": 94688,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.23142198849022116
+    },
+    {
+      "query_id": 56898,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.8714545868221136
+    },
+    {
+      "query_id": 56898,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.9493168589354185
+    },
+    {
+      "query_id": 13411,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.6547216238913564
+    },
+    {
+      "query_id": 13411,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.0
+    },
+    {
+      "query_id": 48129,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.7191184989488184
+    },
+    {
+      "query_id": 48129,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.5588294551288162
+    },
+    {
+      "query_id": 50118,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.8738911120579488
+    },
+    {
+      "query_id": 50118,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.0
+    },
+    {
+      "query_id": 31053,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.7235191413530525
+    },
+    {
+      "query_id": 31053,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.007839826897867533
+    },
+    {
+      "query_id": 71218,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.4894526204699377
+    },
+    {
+      "query_id": 71218,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.3245185366793124
+    },
+    {
+      "query_id": 5043,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.826813366651774
+    },
+    {
+      "query_id": 5043,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.45484422125791796
+    },
+    {
+      "query_id": 96432,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.4983531543597976
+    },
+    {
+      "query_id": 96432,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.5264079870660139
+    },
+    {
+      "query_id": 75831,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.0
+    },
+    {
+      "query_id": 75831,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.0012561457568838962
+    },
+    {
+      "query_id": 108075,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.6588384764235892
+    },
+    {
+      "query_id": 108075,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.19231455555688887
+    },
+    {
+      "query_id": 101719,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.47557011408718985
+    },
+    {
+      "query_id": 101719,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.4703296338977989
+    },
+    {
+      "query_id": 114182,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.23897213284442367
+    },
+    {
+      "query_id": 114182,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.1742870921797165
+    },
+    {
+      "query_id": 36265,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.038367902601808127
+    },
+    {
+      "query_id": 36265,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.0
+    },
+    {
+      "query_id": 35391,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.46474716285608947
+    },
+    {
+      "query_id": 35391,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.3657058680219534
+    },
+    {
+      "query_id": 90935,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.5395118145574667
+    },
+    {
+      "query_id": 90935,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.561394792986914
+    },
+    {
+      "query_id": 102507,
+      "group": "plain",
+      "model": "dense",
+      "ndcg@10": 0.914856882358379
+    },
+    {
+      "query_id": 102507,
+      "group": "plain",
+      "model": "logreg",
+      "ndcg@10": 0.7183627972686238
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+chroma_db/
+.chainlit/
+.files/
+.DS_Store
+results/attention/

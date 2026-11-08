@@ -1,0 +1,16 @@
+chainlit==2.11.1
+chromadb==1.5.9
+langchain-core==1.5.3
+langchain-google-genai==4.3.2
+langchain-huggingface==1.2.2
+langgraph==1.2.10
+pandas==3.0.5
+pyarrow==25.0.1
+pytest==9.1.1
+python-dotenv==1.2.2
+sentence-transformers==6.0.0
+torch==2.13.0
+transformers==5.15.0
+rank-bm25==0.2.2
+scikit-learn==1.9.0
+scipy

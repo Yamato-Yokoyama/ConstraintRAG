@@ -1,0 +1,839 @@
+{
+  "summary": {
+    "negated": {
+      "n": 20,
+      "mean_ndcg@10": 0.3280056148649293,
+      "mean_judged_in_top10": 7.75,
+      "mean_trap@10": 0.66,
+      "mean_trap_floor": 0.2
+    },
+    "plain": {
+      "n": 20,
+      "mean_ndcg@10": 0.5683504918684735,
+      "mean_judged_in_top10": 7.6
+    },
+    "corpus_size": 5992
+  },
+  "queries": [
+    {
+      "query_id": 71987,
+      "query": "n95 not kn95 masks",
+      "group": "negated",
+      "ndcg@10": 0.1621350910289169,
+      "judged_in_top10": 10,
+      "top10": [
+        "KN95 Face Mask 50 PCs, WWDOLL Multiple Colour 5 Layers KN95 Masks, Dispoasable Masks Respirator for Protection(Black, White, Grey, Red, Purple)",
+        "WWDOLL KN95 Face Mask - 25 Pcs Breathable 3D Design Safety Masks, Dispoasable Masks Respirator for Protection - KN95 958 White",
+        "KN95 Face Mask 50 PCs, WWDOLL Multiple Colour 5 Layers KN95 Masks, Dispoasable Respirator Protection Mask for Men and Women(Pink, Blue, Grey, Red, Purple)",
+        "KN95 Face Mask 25 PCs, WWDOLL Multiple Colour 5 Layers KN95 Masks, Filter Efficiency\u226595% Protection Against PM2.5 Dust, Air Pollution(Pink, Green, Grey, Red, Purple)",
+        "KN95 Disposable Face Mask - Miuphro Multicolor KN95 Safety Masks, 5-Ply Breathable Respirator Protection Masks for Man and Women 25 Pack",
+        "KN95 Face Mask, 20 Pack Black Disposable Face mask, Filter Efficiency\u226595%, 5 Layer Cup Dust Safety Masks Protection Against PM2.5 with Nose Bridge Clip for Men Women",
+        "KN95 Disposable Face Mask 25 Pack - Miuphro 5-Ply Breathable Safety Masks Against PM2.5, Dispoasable Respirator Protection Mask for Men and Women Black",
+        "KN95 Face Masks 30PCS, 5-Ply Breathable & Comfortable Safety Mask, Protection Masks Against PM2.5 for Women and Men",
+        "25pcs KN95 Face Mask Black 5 Layer Cup Dust Safety Masks Filter Efficiency\u226595% Breathable Elastic Ear Loops Black Masks",
+        "FANGTIAN N95 Mask NIOSH Certified Particulate Respirators Protective Face Mask (Pack of 10, Model FT-N040 / Approval Number TC-84A-7861)"
+      ],
+      "excluded_term": "kn95",
+      "trap@10": 0.9,
+      "trap_floor": 0.4
+    },
+    {
+      "query_id": 23909,
+      "query": "cat treats without chicken",
+      "group": "negated",
+      "ndcg@10": 0.5670719464583928,
+      "judged_in_top10": 10,
+      "top10": [
+        "Adirondack Grain Free Cat Treats Made in USA Only (Single Ingredient, Freeze Dried Cat Treats), Pure Chicken Breast, 1.1 oz. Resealable Bag",
+        "Blue Buffalo Wilderness Soft-Moist Grain-Free Cat Treats Variety Pack - 4 Flavors (Chicken & Duck, Chicken & Trout, Chicken & Salmon, and Chicken & Turkey) - 2 Oz Each (4 Total Pouches)",
+        "HALO Liv-A-Littles Grain Free Natural Dog and Cat Treats - 2.2 Oz Freeze Dried Chicken Breast - Real Whole Meat Pet Treats in Portable Jar - Sustainably Sourced, Low Calorie, and Great for Training",
+        "ORIJEN Freeze Dried Cat Treats, Grain Free, Natural & Raw Animal Ingredients, Original made with Free-Run Poultry & Wild-Caught Monkfish, 1.25 oz",
+        "Blue Buffalo Wilderness Grain Free Soft-Moist Cat Treats, Chicken & Salmon 8-oz Bag",
+        "Instinct Freeze Dried Raw Boost Mixers Grain Free Cage Free Chicken Recipe All Natural Cat Food Topper, 6 oz. Bag",
+        "PureBites Freeze-Dried Cat Treats with Chicken Breast 2.3 oz ( Packaging May Vary )",
+        "Halo Liv-A-Littles Dog and Cat Treats, Grain Free, Freeze-Dried, Training Treats, Wild Salmon 1.6oz",
+        "Raw Paws Freeze Dried Chicken Liver for Dogs & Cats, 4-oz - Liver Treats for Dogs Made in USA Only - Human Grade Cat Liver Treats - Freeze Dried Liver Treats for Dogs - Liver Training Treats for Dogs",
+        "Blue Buffalo Basics Limited Ingredient Diet Grain Free, Natural Indoor Adult Dry Cat Food, Fish & Potato 5-lb"
+      ],
+      "excluded_term": "chicken",
+      "trap@10": 0.7,
+      "trap_floor": 0.0
+    },
+    {
+      "query_id": 115782,
+      "query": "zippered sweatshirt without hood mens",
+      "group": "negated",
+      "ndcg@10": 0.39682996658626307,
+      "judged_in_top10": 7,
+      "top10": [
+        "Amazon Essentials Men's Full-Zip Hooded Fleece Sweatshirt, Black, Large",
+        "Amazon Essentials Men's Lightweight French Terry Full-Zip Hooded Sweatshirt, Oatmeal Heather, Large",
+        "Sport-Tek Men's Full Zip Sweatshirt,Medium,Vintage Hthr",
+        "Awdis Mens Plain Fresher Full Zip Sweat/Sweatshirt/Outerwear (L) (Heather Grey)",
+        "Skechers mens Gowalk Everywhere Jacket Hoodless Hoodie, Bold Black, Small US",
+        "Joe's USA - Mens Athletic Full-Zip Sweatshirt in Adult Sizes: M",
+        "LAIWANG Men's Full Zip Fleece Hoodie zippered Color Block hooded slim Fit Long Sleeve Lightweight Sweatshirt With Kanga Pocket (GREY, L)",
+        "VATPAVE Mens Casual Plaid Sleeveless Shirt Front Pocket Button Down Vest Medium White Gray",
+        "Hope & Henry Mens' Grey Mock Neck Cable Sweater with Full Zipper",
+        "Joe's USA - Mens Athletic Full-Zip Sweatshirt in Adult Sizes: L"
+      ],
+      "excluded_term": "hood",
+      "trap@10": 0.4,
+      "trap_floor": 0.0
+    },
+    {
+      "query_id": 1435,
+      "query": "100 watt folding solar panel without charge controller",
+      "group": "negated",
+      "ndcg@10": 0.4238040257093449,
+      "judged_in_top10": 4,
+      "top10": [
+        "ACOPOWER 100W Portable Solar Panel Kit (Expansion 100W)",
+        "ROCKPALS RP082 100w Foldable Solar Panel Charger with Kickstand, Parallel Cable, QC 3.0 and USB-C, Upgraded Portable Solar Panel for Jackery/Rockpals Power Station",
+        "ROCKPALS SP003 100W Foldable Solar Panel for Jackery Explorer/Flashfish/BALDR/Goal Zero Portable Power Station Generator and USB Devices, Portable Solar Panel Charger with 3 USB Ports",
+        "PowerECO 100W 12V Solar Poly Panel RV Kit with 20A PWM Charge Controller/Mounting Brackets/Solar Cables/Cable Entry housing(100W PWM20A)",
+        "Renogy 100 Watt 12 Volt Monocrystalline Off Grid Portable Foldable 2Pcs 50W Solar Panel Suitcase Built-in Kickstand with Waterproof 20A Charger Controller",
+        "ECO-WORTHY 120W Foldable Solar Panel Kit for Portable Generator Power Station, with USB Controller to Charge 12V Battery for RV Camping Emergency Power",
+        "SOLPERK 100W Solar Panel 12V, Monocrystalline Solar Panel Kit with High Efficiency Module PV Power for Battery Charging, Off Grid Solar Panels for RV, Boat, Camper, Roof, Cabin, Shed, Home",
+        "Renogy 100W Eclipse Lightweight Suitcase Without Controller, Panel Only, Black",
+        "ECO-WORTHY 100W Solar Water Pump Kit - 100W Solar Panel + 12V Water Pump + 20A LCD Display PWM Controller + Pair of Cable for Remote Watering, Garden, Farm Irrigation, Tank Filling",
+        "Topsolar SolarFairy 100W Portable Foldable Solar Panel Charger Kit 18V DC Output for Portable Generator Power Station + 12V RV Boat Car Battery + USB & Type C for Cell Phone Tablet"
+      ],
+      "excluded_term": "controller",
+      "trap@10": 0.4,
+      "trap_floor": 0.0
+    },
+    {
+      "query_id": 59940,
+      "query": "laptop not chromebook",
+      "group": "negated",
+      "ndcg@10": 0.019228612724337114,
+      "judged_in_top10": 8,
+      "top10": [
+        "HP 11.6 Inch high performance Chromebook Laptop Computer, Intel Celeron N3060 Up to 2.48GHz, 4GB Memory, 16GB eMMC, WiFi 802.11ac, USB 3.1, Bluetooth, Webcam, Chrome OS (Renewed)",
+        "Laptop HP X360 14a Chromebook 14\" HD Touchscreen, Entertaining from Any Angle Intel Celeron, 4GB DDR4 64GB eMMC WiFi Webcam Stereo Speakers Bluetooth 4.2 Chrome Blue Metallic Color (Renewed)",
+        "2021 Newest_HP 11.6\" HD Anti-Glare Laptop Computer, Thin&Light Chromebook, MediaTek MT8183 Processor, 4GB RAM, 64GB eMMC, Bluetooth, Webcam, USB-A&C, WiFi 5, Chrome OS, Bundle with Mouse Pad",
+        "HP Chromebook 14-inch HD Laptop, Intel Celeron N4000, 4 GB RAM, 32 GB eMMC, Chrome (14a-na0020nr, Ceramic White)",
+        "HP Chromebook 14-inch HD Laptop, Intel Celeron N4000, 4 GB RAM, 32 GB eMMC, Chrome (14a-na0010nr, Mineral Silver)",
+        "ASUS Chromebook C200MA-DS01 11.6\" Laptop - Intel Bay Trail-M Celeron N2830 (2.16 GHz), 2GB RAM, 16GB eMMC SSD, Chrome OS (Renewed)",
+        "SAMSUNG Galaxy Chromebook 4 11.6-inch 64GB eMMC, 4GB RAM, Gigabit Wi-Fi, Chrome OS, HD Intel Celeron Processor N4000",
+        "Acer 15 CB3-532-C47C 15.6\u2033 Chromebook - Celeron N3060 1.6 GHz - 2 GB RAM - 16 GB SSD - Granite Gray",
+        "HP Chromebook 14 Laptop, Intel Celeron N4000 Processor, 4 GB RAM, 32 GB eMMC, 14\u201d HD Display, Chrome, Lightweight Computer with Webcam and Dual Mics, Home, School, Music, Movies (14a-na0021nr, 2021)",
+        "Lenovo Chromebook C330 2-in-1 Convertible Laptop, 11.6-Inch HD (1366 x 768) IPS Display, MediaTek MT8173C Processor, 4GB LPDDR3, 64 GB eMMC, Chrome OS, 81HY0000US, Blizzard White"
+      ],
+      "excluded_term": "chromebook",
+      "trap@10": 1.0,
+      "trap_floor": 0.6
+    },
+    {
+      "query_id": 40132,
+      "query": "fidget pack without pop it",
+      "group": "negated",
+      "ndcg@10": 0.5648456913210967,
+      "judged_in_top10": 10,
+      "top10": [
+        "Fidget Toy Set with Pop It - 25pc Cheap Sensory Pack for Toddlers, Kids, and Teens - Toddler-Friendly Stim Toys for Stress Relief - Autism, ADHD, Anxiety - Storage Box Included",
+        "Fidget Toy Pack, Fidget Pack Sensory Relieves Stress Anxiety for Kids Adults, Fidget Toy Set with Pop and Dimple",
+        "Tirdkid Mini Pop it Cheap Fidget Toy Simple Dimple Fidget Popper Toy with Keychain Silicone Bubble Sensory Toys for Kids Adults Decompression and Emotion Anxiety Relief Tool",
+        "Gigilli Fidget Spinner Toys Pop, 6 Pcs Fidget Bulk Stress Relief Simple Popper Finger Spinner Pack, ADHD Pop Bubble Fidget Sensory Toy Anti Anxiety Autism Party Favors for Kids (Camouflage)",
+        "paerma Fidget Pop Simple dimple Cheap Toys Packs Sensory figetget Mini Toy Set for Kids Adults Relieves Stress and Anxiety figit Gifts Boxes. (Decompression Toys)",
+        "Family Values Pop Fidget Toy, 6 Pack Push Pop Pop Bubble Sensory Toy Silicone Squeeze Fidget Toy for Stress Reliever Autism ADD, ADHD Special Needs Anxiety Relief Toys for Kids Adults",
+        "KOWOOK 33Pcs Pop Push fidgets Sensory It is Fidget Packs Set, Fidget Toys Sensory Relieves Stress Anxiety for Kids Adults (Pink-2)",
+        "TorrisToys 3 Pack Push Pop Bubble Fidget Sensory Toy - Free Bonus: Simple Dimple Toy Keychain - Premium Silicone Rainbow Pop it Fidget Toy",
+        "PLUSYARD Cute Ice Cream Push pop Bubble Fidget Toy, Stress Reliever Silicone Popsicle Pop Fidget Toy for Kids and Adults, Sensory Irritability Toy for Autism with Special Needs to Relieve Stress",
+        "Fidget Toys Pack Cheap Pop Bubble Sensory Fidget Pack Stress Relief Toys with Marble Mesh Pop Anxiety Tube for Kids Adult (a)"
+      ],
+      "excluded_term": "pop it",
+      "trap@10": 0.3,
+      "trap_floor": 0.0
+    },
+    {
+      "query_id": 1509,
+      "query": "100w solar panel without controller",
+      "group": "negated",
+      "ndcg@10": 0.6745472633690242,
+      "judged_in_top10": 7,
+      "top10": [
+        "ACOPOWER 100W Portable Solar Panel Kit (Expansion 100W)",
+        "Renogy 100W Eclipse Lightweight Suitcase Without Controller, Panel Only, Black",
+        "PowerECO 100W 12V Solar Poly Panel RV Kit with 20A PWM Charge Controller/Mounting Brackets/Solar Cables/Cable Entry housing(100W PWM20A)",
+        "SOLPERK 100W Solar Panel 12V, Monocrystalline Solar Panel Kit with High Efficiency Module PV Power for Battery Charging, Off Grid Solar Panels for RV, Boat, Camper, Roof, Cabin, Shed, Home",
+        "ECO-WORTHY 100W Solar Water Pump Kit - 100W Solar Panel + 12V Water Pump + 20A LCD Display PWM Controller + Pair of Cable for Remote Watering, Garden, Farm Irrigation, Tank Filling",
+        "Renogy KIT-STARTER-100D Starter Kit with 1 Pcs 100W Monocrystalline Solar Panel and and 30A PWM Charge Controller for RV, Boats, Trailer, Camper, Marine,Off-Grid System",
+        "20A Solar Charge Controller Solar Panel Battery Intelligent Regulator with Dual USB Port 12V/24V PWM Auto Paremeter Adjustable LCD Display",
+        "ROCKPALS SP003 100W Foldable Solar Panel for Jackery Explorer/Flashfish/BALDR/Goal Zero Portable Power Station Generator and USB Devices, Portable Solar Panel Charger with 3 USB Ports",
+        "ROCKPALS RP082 100w Foldable Solar Panel Charger with Kickstand, Parallel Cable, QC 3.0 and USB-C, Upgraded Portable Solar Panel for Jackery/Rockpals Power Station",
+        "Nekteck 100 Watt Monocrystalline Solar Panel with Waterproof Design & High-Efficiency Module for Battery Charging Boat, RV, Camping Use, and Any Other Off-Grid Appliances"
+      ],
+      "excluded_term": "controller",
+      "trap@10": 0.4,
+      "trap_floor": 0.2
+    },
+    {
+      "query_id": 1400,
+      "query": "100 headset without micrphone",
+      "group": "negated",
+      "ndcg@10": 0.018309015026019854,
+      "judged_in_top10": 1,
+      "top10": [
+        "EKSA E1000 USB Gaming Headset for PC - Computer Headphones with Microphone/Mic Noise Cancelling, 7.1 Surround Sound Wired Headset&RGB Light - Gaming Headphones for PS4/PS5 Console Laptop",
+        "Renogy 100W Eclipse Lightweight Suitcase Without Controller, Panel Only, Black",
+        "Wireless Headphone, Waterproof Bluetooth Earphone Stereo Design Headphone with Charging Box in Ear Earbuds Sports Headset Noise Cancelling with Microphone for iOS Android",
+        "OneOdio Computer Headsets with Microphone - PC Headphones with Boom Mic for Gaming Wired Over Ear Headset with in-Line Control Volume Mute for Mac Laptop Office Zoom Conference",
+        "HP Stereo Gaming Headset PC Over Ear Headphones 7.1 Surround Sound with Mic for PC/Mac/Laptop Gamer Headset with Noise Cancelling Mic Comfortable Design and LED Lights",
+        "Gaming Headset with Microphone, Glowing Aurora RGB, Gaming Headset PC PS4 PS5 Xbox One Xbox Series X & S Laptop Mac Nintendo, 7.1 Surround Sound, Soft Memory Ear Muffs, Noice Cancellation",
+        "The Year Without Santa Claus",
+        "Beats by Dr. Dre Solo3 Wireless Bluetooth Headphones - Mickey's 90th Anniversary Edition - Kit with USB Adapter Cube",
+        "Microphone with Studio Headphone Set 192kHz/24bit MAONO Vocal Condenser Cardioid Podcast Mic Compatible with Mac and Windows, YouTube, Gaming, Live Streaming, Voice-Over (AU-A04H)",
+        "SADES SA810 Gaming Headset Surround Sound Stereo Headphones Bass Gaming Headphones with Noise Isolation Microphone Volume Control for Xbox One PS4 PC Laptop Mac Mobile"
+      ],
+      "excluded_term": "microphone",
+      "trap@10": 0.6,
+      "trap_floor": 0.4
+    },
+    {
+      "query_id": 78323,
+      "query": "pc headset without microphone",
+      "group": "negated",
+      "ndcg@10": 0.3059967739214748,
+      "judged_in_top10": 8,
+      "top10": [
+        "EKSA E1000 USB Gaming Headset for PC - Computer Headphones with Microphone/Mic Noise Cancelling, 7.1 Surround Sound Wired Headset&RGB Light - Gaming Headphones for PS4/PS5 Console Laptop",
+        "HP Stereo Gaming Headset PC Over Ear Headphones 7.1 Surround Sound with Mic for PC/Mac/Laptop Gamer Headset with Noise Cancelling Mic Comfortable Design and LED Lights",
+        "OneOdio Computer Headsets with Microphone - PC Headphones with Boom Mic for Gaming Wired Over Ear Headset with in-Line Control Volume Mute for Mac Laptop Office Zoom Conference",
+        "Xbox One Headset with Mic LED Light On Ear Gaming Headphone PS4,3.5mm Wired Gaming Headset for PC Mac Laptop Nintendo Switch Gamer Headphone (Red)",
+        "USB Headset with Microphone Noise Cancelling 3.5mm Computer Headset with in-Line Call Control, Comfort-fit 300 Degree Boom Mic Headset with Microphone for Laptop, PC, Call Center, Phone, Skype, Zoom",
+        "PS4 Wireless Gaming Headset Headphones USB for PS5 PS4 PC Computer with Microphone Over Ear Stereo Virtual 7.1 Surround Sound",
+        "Gaming Headset with Microphone, Glowing Aurora RGB, Gaming Headset PC PS4 PS5 Xbox One Xbox Series X & S Laptop Mac Nintendo, 7.1 Surround Sound, Soft Memory Ear Muffs, Noice Cancellation",
+        "NUBWO Gaming headsets PS4 N7 Stereo Xbox one Headset Wired PC Gaming Headphones with Noise Canceling Mic , Over Ear Gaming Headphones for PC/MAC/PS4/PS5/Switch/Xbox one (Adapter Not Included)",
+        "Wireless Gaming Headset with Stereo Sound, for PC, PS4, Xbox One, YOTMS Q7 Wired Over Ear Headphones with Detachable Noise Canceling Mic, 50mm Driver, Wireless Bluetooth Music Headset, 40 Hours",
+        "SADES SA810 Gaming Headset Surround Sound Stereo Headphones Bass Gaming Headphones with Noise Isolation Microphone Volume Control for Xbox One PS4 PC Laptop Mac Mobile"
+      ],
+      "excluded_term": "microphone",
+      "trap@10": 0.6,
+      "trap_floor": 0.1
+    },
+    {
+      "query_id": 99719,
+      "query": "sweatshirt without hood for men",
+      "group": "negated",
+      "ndcg@10": 0.31488013066763093,
+      "judged_in_top10": 2,
+      "top10": [
+        "Sport-Tek Men's Full Zip Sweatshirt,Medium,Vintage Hthr",
+        "Spreadshirt Satanic Goat Head With Pentagram Men's Hoodie, 3XL, black",
+        "Unisex Adulting Is Not For Me Today Hoodie Funny Nerdy Novelty Guys (Black) - M",
+        "Joe's USA - Mens Athletic Full-Zip Sweatshirt in Adult Sizes: M",
+        "Joe's USA - Mens Athletic Full-Zip Sweatshirt in Adult Sizes: L",
+        "Skechers mens Gowalk Everywhere Jacket Hoodless Hoodie, Bold Black, Small US",
+        "LAIWANG Men's Full Zip Fleece Hoodie zippered Color Block hooded slim Fit Long Sleeve Lightweight Sweatshirt With Kanga Pocket (GREY, L)",
+        "Champion Crewneck Fleece Sweatshirt for Men's Big and Tall with Script Logo",
+        "Joe's USA Men's Super Heavyweight Full-Zip Sweatshirt-XL-Black",
+        "SPORT-TEK Men's Tall Full Zip Sweatshirt XLT Black"
+      ],
+      "excluded_term": "hood",
+      "trap@10": 0.4,
+      "trap_floor": 0.0
+    },
+    {
+      "query_id": 28603,
+      "query": "contigo without straw",
+      "group": "negated",
+      "ndcg@10": 0.12193524336297425,
+      "judged_in_top10": 5,
+      "top10": [
+        "Contigo Luxe Stainless Steel Tumbler with Spill-Proof Lid and Straw | Insulated Travel Tumbler with No-Spill Straw, 24 oz, Biscay Bay,2063129",
+        "Don't Let Them Leave This World Without You",
+        "If Your Heart Ain't Busy Tonight",
+        "Contigo Kids 3 Pack Tumblers - Blue Green Red",
+        "Contigo Kids Water Bottle, 14 oz with Autospout Technology \u2013 Spill Proof, Easy-Clean Lid Design \u2013 Ages 3 Plus, Top Rack Dishwasher Safe \u2013 Dinos",
+        "Contigo Kids 3 Pack Tumblers - Pink/Purple/Aqua (Red Purple Green)",
+        "Tiptoes",
+        "Contigo Kids Spill Proof Tumbler, Water Bottle with Straw, BPA Free Drinks Bottle for Children, Leakproof Flask, Ideal for Kindergarden, School and Sports, 420 ml",
+        "The Book with No Pictures",
+        "Avocado Reversible Plushie Toys Halloween Stuffed Animal Mood Plush Double-Sided flip Show Your Mood | Green and Yellow | Show Your Mood Without Saying a Word"
+      ],
+      "excluded_term": "straw",
+      "trap@10": 0.2,
+      "trap_floor": 0.0
+    },
+    {
+      "query_id": 7752,
+      "query": "alarm clock without snooze",
+      "group": "negated",
+      "ndcg@10": 0.39160501933196834,
+      "judged_in_top10": 10,
+      "top10": [
+        "Silent Non Ticking Analog Alarm Clock with Nightlight Snooze Travel Alarm Clock Silent Sweep Second Hand, Lightweight Analog Quartz Clocks for Bedrooms (Purple-561)",
+        "Alarm Clocks Non-Ticking for Bedrooms, MEKO Smart Tickless AA Battery Powered Travel Alarm Clock with Snooze and Nightlight, Silent No Ticking Bedside Clock(Blue)\u00a1\u00ad",
+        "FAMICOZY Analog Alarm Clock for Elderly,Quiet Non Ticking with Snooze and Backlight,Crescendo Loud Alarm,Big Numbers for Easy Reading,Battery Operated,White",
+        "Analog Alarm Clock for Heavy Sleepers Adults Music Wake Battery Operated, 4 inches Silent Non Ticking Alarm Clocks for Bedrooms with Night Light and Snooze",
+        "5.5\" Silent Analog Alarm Clock Non Ticking, Gentle Wake, Beep Sounds, Increasing Volume, Battery Operated Snooze and Light Functions, Easy Set, Black (Best for Elder)",
+        "Solid Wood Analog Alarm Clock with Sweep Movement for Bedroom,Battery-Operated Non-Ticking Clock with Snooze Button and Night Light,Half Round,Light Brown",
+        "5.7\" Silent Analog Alarm Clock Non Ticking, Gentle Wake, Beep Sounds, Increasing Volume, Battery Operated Snooze and Light Functions, Easy Set, Large (Best for Elder and Children) (siliver)",
+        "Digital Alarm Clock,6.5 Inch Large Display LED Mirror Electronic Clocks, with Snooze,12/24H,Dual USB Charging Ports, 3 Adjustable Brightness,for Bedroom Home Office -White",
+        "Battery Digital Alarm Clock for Bedroom, 4.5\" LCD Display Bedside Alarm Clock with Snooze, Backlight, Night Light, Date and Temperature, Sleep Timer for for Heavy Sleepers, Elderly, Teens (Pink)",
+        "Tinload 4\" Loud Crescendo Bell Alarm Clock Silent No Ticking,Snooze,Nightlight,Battery Operated,Easy Set(Black)"
+      ],
+      "excluded_term": "snooze",
+      "trap@10": 1.0,
+      "trap_floor": 0.1
+    },
+    {
+      "query_id": 42300,
+      "query": "fountain pen without cartridge",
+      "group": "negated",
+      "ndcg@10": 0.6607222247381963,
+      "judged_in_top10": 10,
+      "top10": [
+        "Dad Birthday Gift,Dad Gift from Daughter or Son,Dad Gift Ideas, Best Dad Gifts,Funny Father's Day Gifts fro- Best Papa Ever-Funny Father's Day Gifts from Daughter & Son-Fountain Pen Gift[without ink]",
+        "MUJI Aluminum Fountain Pen",
+        "C2 Fountain Pen Fine Nib, Eyedropper Filling, Clear Transparent Acrylic, Large-Capacity Gift Set (Clear Color Only)",
+        "Dryden Designs Fine Nib Fountain Pen - Includes 24 Ink Cartridges - 12 Black and 12 Blue - Pink - Smooth Elegant Writing with Fine Nib and Ink Converters",
+        "LACHIEVA Sea Shell Abalone Fountain Pen with Germany Schmidt Nib. Luxury Pen for Every Holidays. Nice Writing Handmade Premium Pen Gift for Men and Women",
+        "Majohn C1 Fountain Pen Fine Nib Clear Transparent Acrylic Resin, Mini Pocket Pen, Eyedropper,Cartridges and Converter Filling",
+        "Black & Blue Ink Cartridges for Fountain Pens. Big Pack of 20 Short International Standard Size Cartridges. Perfect for Calligraphy Pen. Universal Fine Design with Incredible Long Lasting Color",
+        "Zebra Pen Fountain Pen Set, Fine Point 0.6mm, Assorted Colors Non-Toxic Ink, Stainless Steel Nib, Disposable, 4-Pack (48304), Black, Pink, Purple, Blue",
+        "Amazon Basics Refillable Fountain Pen - Medium Point, Black Ink",
+        "Amazon Basics Refillable Fountain Pen - Fine Point, Black Ink"
+      ],
+      "excluded_term": "cartridge",
+      "trap@10": 0.3,
+      "trap_floor": 0.0
+    },
+    {
+      "query_id": 14476,
+      "query": "bed desk without cup holder",
+      "group": "negated",
+      "ndcg@10": 0.13576594374196443,
+      "judged_in_top10": 9,
+      "top10": [
+        "Laptop Desk- Bed Desk for Laptop with Cup Holder-Product Simple Foldable Laptop Table Stand for Student Study -Breakfast Tray Table for Bed-for Bed, Sofa, Couch Laptop, Tablet Stand (Wood)",
+        "Bedside Shelf for Bed \u2013 College Dorm Room Clip On Nightstand with Cup Holder & Cord Holder - Nightstand for Students \u2013 Bunk Bed Shelf for Top Bunk \u2013 Kids Nightstand for Bedroom (Plastic, White)",
+        "Bedside Shelf for Bed \u2013 College Dorm Room Clip On Nightstand with Cup Holder & Cord Holder - Nightstand for Students \u2013 Bunk Bed Shelf for Top Bunk \u2013 Kids Nightstand for Bedroom (Plastic, Black)",
+        "Bed Desk with Drawer, Phone and Cup Holder, Laptop Desk for Bed, 23.6\" Foldable Lap Desk for Adults and Kids, Laptop Stand for Bed (Pink Top+White Leg, 23.6\")",
+        "Laptop Bed Table, Portable Laptop Desk Bed Tray with Foldable Legs, Lap Desk TV Tray for Breakfast Serving,Notebook Stand Reading Holder with Phone Slot and Cup Holder for Sofa Couch Floor - Beige",
+        "Laptop Desk Foldable Bed Table, Portable Lap Desk Laptop Bed Tray Table with Storage Drawer and Cup Holder, Lap Tray Table Notebook Stand Reading Desk Breakfast Tray for Bed Couch Sofa Floor \u2013 Pink",
+        "ZEGNEER Laptop Bed Desk, Foldable Bed Tray Table with 4 USB Port, Computer Laptop Stand for Couch/Sofa/Office/Breakfast, Pen Drawer, Cup Holder, Mini Lamp and Fan, Grey",
+        "Laptop Stand for Bed, Foldable Laptop Bed Tray Table with Storage Drawer and Cup Slot,Lap Table for Eating,Working,Reading Book on Bed/Sofa/Floor (Black A)",
+        "Zhoohz Laptop Bed Tray Table, Portable Foldable Lap Stand Desk with Cup Holder Phone Slot and Storage Drawer for Eating Breakfast, Reading Book, Working,Watching Movie on Bed/Couch/Sofa/Floor,Beige",
+        "Portable Laptop Desk for Bed, Foldable Laptop Bed Tray Table Lap Desk with Cup Holder, Storage Drawer and Notebook Holder for Bed/Couch/Sofa/Floor - Black"
+      ],
+      "excluded_term": "cup holder",
+      "trap@10": 0.9,
+      "trap_floor": 0.0
+    },
+    {
+      "query_id": 95852,
+      "query": "solar lights not motion sensor",
+      "group": "negated",
+      "ndcg@10": 0.33259474594542077,
+      "judged_in_top10": 10,
+      "top10": [
+        "Solar Lights Outdoor Motion Sensor of 2, 9-Watt(130W Equ.) 1400-Lumen LED Spotlights , Solar Flood Security Lights for Garden Driveway Patio Yard Path Porch Deck, 100-Week 100% Free Replacement",
+        "Solar Lights Outdoor, GSBLUNIE 1600LM 3 Adjustable Heads Dusk to Dawn Solar Motion Sensor Lights Outdoor,IP65 Waterproof Solar Flood Lights Outdoor Security Lights Detector for Yard,Garage,Front Door",
+        "Solar Lights Outdoor Motion Sensor Light 3 Head 230 LED Waterproof Safety Lights Wall Flood Lights for Porch,Garden,Garage,Patio",
+        "Solar Motion Sensor Lights Outdoor Aluminum,1400LM LED Spotlights 9-Watt(130W Equ.) Solar Security Flood Lights for Garden Driveway Patio, 2-Year Battery Life,160-Week 100% Replacement Guarantee",
+        "Solar Lights Outdoor, [6 Pack/3 Modes/50LED] SEZAC Motion Sensor Security Lights Solar Security Lights IP 65 Wireless Waterproof Outdoor Lights for Garden Patio Yard Deck Garage Fence Pool",
+        "Solar Outdoor Lights Motion Sensor, Solar Lights Outdoor Waterproof, 100 LED Security Lights Dusk to Dawn Wireless with 3 Modes Super Bright for Pathway Yard Fence Stairs Porch ( 6-Packs)",
+        "Solar Lights Outdoor Motion Sensor 4 Pack, 1640 Lm with 270\u00b0 Wide Lighting Angle, MITAOHOH Waterproof Wireless Solar Powered Security Wall Light for Garage Walkway Step Stair Fence Deck",
+        "Solar Lights Outdoor [6 Pack/3 Working Mode], SEZAC Solar Security Lights Solar Motion Sensor Lights Wireless IP 65 Waterproof Outdoor Lights for Garden Fence Patio Garage (42 LED)",
+        "Solar Motion Sensor Light Outdoor, 320 Bright COB LED, 16.4Ft Cable, 3 Working Mode, Adjustable Solar Panel, Wired Solar Powered Security Flood Lights for Indoor Use, Wall, Yard, Garage, Garden(2 Set)",
+        "LECLSTAR Solar Outdoor Lights,Motion Sensor New Upgrade 268 LEDs Solar Security Light IP65 Waterproof Led Lights Super Bright Solar Wireless Wall Lights with 3 Optional Modes and 4Wide Angle(1 Pack)"
+      ],
+      "excluded_term": "motion",
+      "trap@10": 1.0,
+      "trap_floor": 0.5
+    },
+    {
+      "query_id": 49760,
+      "query": "headphones not wireless",
+      "group": "negated",
+      "ndcg@10": 0.030963660288809834,
+      "judged_in_top10": 4,
+      "top10": [
+        "Bluetooth Earbuds, Putars Bluetooth Headphones Waterproof, Wireless Sport Earphones Bluetooth HiFi Bass Stereo Sweatproof Earbuds Headset for Workout, Running, Gym Compatible For iPhone",
+        "Wireless Headphones for TV Watching \u2013 Digital Earphones for Television Listening with 2.4GHz RF Transmitter, Charging Dock, 100ft Wireless Range and Rechargeable 20 Hour Battery, Black",
+        "Wireless Headphone, Waterproof Bluetooth Earphone Stereo Design Headphone with Charging Box in Ear Earbuds Sports Headset Noise Cancelling with Microphone for iOS Android",
+        "Ear Hook Bluetooth Wireless Headphone,Non Ear Plug Headset with Microphone,Single Ear Noise Cancelling Earphones Painless Wearing with Earbud Case for Android Smartphones,iPhone X 8 7 6 (Red)",
+        "The Year Without Santa Claus",
+        "PS4 Wireless Gaming Headset Headphones USB for PS5 PS4 PC Computer with Microphone Over Ear Stereo Virtual 7.1 Surround Sound",
+        "SENNHEISER RS 175 RF Wireless Headphone System",
+        "Snyank Wireless Earbuds Bluetooth 5.0 Headphone with 2000 mAh Charging Case, 80H Playtime, Digital LED Display, IPX7 Waterproof Stereo Headphones, Built-in Microphone Headset",
+        "Beats by Dr. Dre Solo3 Wireless Bluetooth Headphones - Mickey's 90th Anniversary Edition - Kit with USB Adapter Cube",
+        "Kids Headphones - noot products K11 Foldable Stereo Tangle-Free 3.5mm Jack Wired Cord On-Ear Headset for Children/Teens/Boys/Girls/Smartphones/School/Kindle/Airplane Travel/Plane/Tablet (Navy/Teal)"
+      ],
+      "excluded_term": "wireless",
+      "trap@10": 0.8,
+      "trap_floor": 0.8
+    },
+    {
+      "query_id": 45968,
+      "query": "glider without ottoman",
+      "group": "negated",
+      "ndcg@10": 0.37532149338049015,
+      "judged_in_top10": 10,
+      "top10": [
+        "Atoll Glider with Ottoman, Espresso/Beige",
+        "COASTER Reclining Glider with Matching Ottoman Chocolate",
+        "Angel Line Windsor Glider and Ottoman, Natural and Gray",
+        "Costzon Baby Glider and Ottoman Cushion Set, Wood Baby Rocker Nursery Furniture, Upholstered Comfort Nursery Chair & Ottoman with Padded Arms (Beige)",
+        "Storkcraft Tuscany Custom Glider and Ottoman with Lumbar Pillow, White/Grey",
+        "Costzon Glider and Ottoman Set, Wood Glider Rocker for Nursery, Upholstered Comfort Nursing Rocking Chair with Storage Pocket, Padded Armrests & Detachable Cushion, Easy to Assemble (Brown)",
+        "COASTER Upholstery Glider Rocker with Matching Ottoman Beige and Cherry",
+        "Dutailier Ruby 0388 Glider Multiposition-lock Recline with Ottoman",
+        "Storkcraft Premium Hoop Glider and Ottoman (Gray Base, Swirl Cushion) \u2013 Padded Cushions with Storage Pocket, Smooth Rocking Motion, Easy to Assemble, Solid Hardwood Base",
+        "NEW Windsor Glider and Ottoman White Finish and Gray Cushions"
+      ],
+      "excluded_term": "ottoman",
+      "trap@10": 1.0,
+      "trap_floor": 0.0
+    },
+    {
+      "query_id": 77730,
+      "query": "paper shredder without basket",
+      "group": "negated",
+      "ndcg@10": 0.7414855180760758,
+      "judged_in_top10": 10,
+      "top10": [
+        "Aurora AS680S Professional Light Duty Strip Cut Paper Shredder Without Wastebasket",
+        "Aurora AS890C 8-Sheet Cross-Cut Paper/Credit Card Shredder with Basket",
+        "Aurora AU800SD Professional Strip Cut Paper Shredder/CD/Credit Card Shredder Without Wastebasket, 8-Sheet Strip-Cut No Basket , Black",
+        "Aurora 6-Sheet Strip-Cut Paper/Credit Card Shredder without Wastebasket",
+        "Mini Hand Shredder SENREAL Portable Paper Shredder A6 Manual Shredder Documents Paper Cutting Tool Home Office Desktop Stationery-Blue",
+        "bonsaii Paper Shredder for Home Use, 6-Sheet Crosscut Paper and Credit Card Shredder for Home Office, Home Shredder with Handle for Document, Mail, Staple, Clip-3.4 Gal Wastebasket(C237-B)",
+        "Aurora AU875XA Paper and Credit Card Shredder with 3.7-Gallon Wastebasket, 8-Sheet Cross-Cut with Basket",
+        "Bonsaii Paper Shredder for Home Use, 6 Sheet Cross Cut Shredder for Small Office Also Shreds CD/Credit Card/Staple with 3.4 Gallons Wastebasket, Document Shredder with Overload and Overheating System",
+        "bonsaii Paper Shredder, 18-Sheet 60-Minutes Paper Shredder for Office Heavy Duty Cross-Cut Shredder with 6 Gallon Pullout Basket & 4 Casters, Anti-Jam High Security Mail Shredder for Home Use(C149-C)",
+        "Bonsaii 8-Sheet Cross-Cut Paper Shredder, P-4 High-Security Credit Card & Staples Shredder Machine for Home Office Use, Portable Handle Design with 3.5 Gallons Wastebasket, Black (C234-B)"
+      ],
+      "excluded_term": "basket",
+      "trap@10": 0.6,
+      "trap_floor": 0.2
+    },
+    {
+      "query_id": 75456,
+      "query": "olive oil not extra virgin",
+      "group": "negated",
+      "ndcg@10": 0.06438055358722923,
+      "judged_in_top10": 10,
+      "top10": [
+        "MD.LIFE Organic Extra Virgin Olive Oil - 32oz - 100% Pure Unfiltered Extra Virgin Olive Oil Cold Pressed , Non-GMO EVOO Greek Olive Oil for Hair Growth",
+        "Bragg (NOT A CASE) Organic Extra Virgin Olive Oil",
+        "Extra Virgin Olive Oil, Royal Variety By Cuac, Early Harvest, Cold Pressed, Designation Of Origin Sierra De Cazorla, Spain.(16.9 Oz / 500ml Bottle)",
+        "Mythology Greek Olive Oil From Greece, Extra Virgin Olive Oil Cold Pressed, Certified PDO Kolymvari Chania Crete - 3 Liter",
+        "Papa Vince Olive Oil Extra Virgin First Cold Pressed Family Harvest 2020/21 Sicily Italy. Delightful High Polyphenol healthy dose & drizzling. Unfiltered, Robust with subtle peppery finish. Keto Vegan",
+        "Croatian Premium Brachia Pure Organic Extra Virgin Olive Oil | First Cold-Pressed, Intense Fruity and Grassy aroma, with a distinctive note of pleasant bitterness and lightness.Perfect for Dipping and Drizzling. No Preservatives. Imported from Croatia 0.25L (250ml)",
+        "Bragg Organic Extra Virgin Olive Oil \u2013 Made with Greek Koroneiki Olives \u2013 Cold Pressed EVOO for Marinades & Vinaigrettes \u2013 USDA Certified, Non-GMO, Kosher 32 oz",
+        "Pompeian USDA Organic Extra Virgin Olive Oil Non-Stick Cooking Spray, Full-Bodied, Perfect for Salads and Pasta, Naturally Gluten Free, Non-Allergenic, Non-GMO, No Propellant, 5 FL. OZ., Single Bottle",
+        "Mr. Papou's | Extra Virgin Olive Oil | First Cold Pressed | Family Owned | Harvested in Greece | 3 Liter - 101.4 fl oz",
+        "PESARO Extra Virgin Olive Oil | Glass Bottle | First Cold Pressed | Premium, Fresh, Light & High in Polyphenols | 100% Single Estate & Mediterranean Blend | 1.5 Liters (50.7 Fl Oz)"
+      ],
+      "excluded_term": "extra virgin",
+      "trap@10": 1.0,
+      "trap_floor": 0.4
+    },
+    {
+      "query_id": 447,
+      "query": "0.5 pens fine point black not gel",
+      "group": "negated",
+      "ndcg@10": 0.2576893780329553,
+      "judged_in_top10": 10,
+      "top10": [
+        "KACO Soft Touch Retractable Gel Ink Pens 0.5mm Fine Point (Macarons Colors 5-Pack Black Ink)",
+        "JoyNote Black Gel Pens, 6 Pack Fine Point Writing Pen for Office, 0.5mm Tips with Premium Ink & Comfort Grip for Smooth Writing",
+        "Zebra Pen G-402 Stainless Steel Retractable Gel Pen, Fine Point, 0.5mm, Black Ink, 2-Count (49212)",
+        "Black Fine Point Rollerball Pens Smooth Writing Extra Fine 0.5 mm Tip Pens Non Bleed Quick Drying Pens Needle Point Pens for Writing Journaling Taking Notes School Office 12 PCS",
+        "Sharpie S-Gel, Gel Pens, Fine Point (0.5mm), Black Ink Gel Pen, 12 Count",
+        "Paper Mate InkJoy Gel Pens, Fine Point, Black, 10 Count",
+        "TUL Retractable Gel Pens 0.5mm Needle Point Fine, Black/Blue Bundle (2 4-packs)",
+        "DELI 12 Pack Black Rolling Ball Pens, Fine Point Pens, 0.5mm Liquid Ink Pens, Quick Dry, No Smear No Bleed Pens",
+        "BIC Gel-ocity Smooth Stic Gel Pen, Fine Point (0.5mm), Black Ink, 36-Count, Vibrant and Smooth Gel Ink",
+        "Sharpie Felt Tip Pens, Fine Point, Black, 12 Count"
+      ],
+      "excluded_term": "gel",
+      "trap@10": 0.7,
+      "trap_floor": 0.3
+    },
+    {
+      "query_id": 41100,
+      "query": "flat black angelus paint",
+      "group": "plain",
+      "ndcg@10": 0.9367673632754434,
+      "judged_in_top10": 10,
+      "top10": [
+        "Angelus Acrylic Leather Paint, Flat Black",
+        "Angelus Acrylic Leather Paint, Flat Black",
+        "Angelus Acrylic Leather Paint, Flat White",
+        "Angelus Acrylic Leather Paint, Flat White",
+        "Angelus Acrylic Paints 1oz Color Black",
+        "Angelus Brand Acrylic Leather Paint Black 1oz",
+        "Leather Paint 4 Oz Flat Black (2-Pack)",
+        "Angelus Acrylic Leather Paint, Black 4oz",
+        "Angelus Walk on Black Paint Restorer",
+        "Angelus Brand Acrylic Leather Paint Waterproof 1oz - Flat Black & Flat White Duo"
+      ]
+    },
+    {
+      "query_id": 75709,
+      "query": "oneplus tv 55 inch",
+      "group": "plain",
+      "ndcg@10": 0.2199620482824775,
+      "judged_in_top10": 9,
+      "top10": [
+        "LG OLED C1 Series 55\u201d Alexa Built-in 4k Smart TV (3840 x 2160), 120Hz Refresh Rate, AI-Powered 4K, Dolby Cinema, WiSA Ready, Gaming Mode (OLED55C1PUB, 2021)",
+        "TCL 55-inch 5-Series 4K UHD Dolby Vision HDR QLED Roku Smart TV - 55S535, 2021 Model",
+        "Hisense 55A6G 55-Inch 4K Ultra HD Android Smart TV with Alexa Compatibility (2021 Model)",
+        "TCL 55S425 55 inch 4K Smart LED Roku TV (2019)",
+        "VIZIO 55-Inch V-Series 4K UHD LED HDR Smart TV with Apple AirPlay and Chromecast Built-in, Dolby Vision, HDR10+, HDMI 2.1, Auto Game Mode and Low Latency Gaming, V555-J01, 2021 Model",
+        "SAMSUNG 55-Inch Class Crystal UHD TU-8000 Series - 4K UHD HDR Smart TV with Alexa Built-in (UN55TU8000FXZA, 2020 Model)",
+        "Sony X80J 55 Inch TV: 4K Ultra HD LED Smart Google TV with Dolby Vision HDR and Alexa Compatibility KD55X80J- 2021 Model",
+        "ONN 50\" Class 4K (2160P) LED TV (ONC50ub18c05)",
+        "SAMSUNG 55-Inch Class Crystal UHD AU8000 Series - 4K UHD HDR Smart TV with Alexa Built-in (UN55AU8000FXZA, 2021 Model)",
+        "Sony X85J 65 Inch TV: 4K Ultra HD LED Smart Google TV with Native 120HZ Refresh Rate, Dolby Vision HDR, and Alexa Compatibility KD65X85J- 2021 Model"
+      ]
+    },
+    {
+      "query_id": 30104,
+      "query": "cricut easy pres",
+      "group": "plain",
+      "ndcg@10": 0.6472588217382083,
+      "judged_in_top10": 6,
+      "top10": [
+        "Cricut EasyPress Tote, Carrying Case for Cricut Easy Press Machines and Accessories, Compatible with Cricut EasyPress and Cricut Easy Press 2 - 9\"x 9\"",
+        "Cricut EasyPress Mini - Heat Press Machine For T Shirts Shoes Hats and Small HTV Vinyl Projects",
+        "Cricut EasyPress 2 - Heat Press Machine For T Shirts and HTV Vinyl Projects, Mint, 9\" x 9\"",
+        "Cricut Lilac Maker",
+        "Cricut EasyPress 2 Heat Press (12\" x 10\"), 12 x 10, Rasberry",
+        "Wilton Cookie Pro Ultra II With 3 Bonus Disks. (20)",
+        "CRICUT FOR BEGINNERS: THE ULTIMATE GUIDE TO LEARN HOW TO USE YOUR CRICUT MACHINE. BEAUTIFY AND DECORATE YOUR SPACES WITH PRACTICAL EXAMPLES AND PROJECT IDEAS",
+        "Edge Cook Spritz-Cookie-Press-Gun-Kit 20 Disc with 8 Icing Tips: Sturdy-Stainless-Steel - Works Even with Arthritis - Ideal for Holidays-Baking-Biscuit, Cake, Churro, Cookie Maker",
+        "bonsaii Paper Shredder, 18-Sheet 60-Minutes Paper Shredder for Office Heavy Duty Cross-Cut Shredder with 6 Gallon Pullout Basket & 4 Casters, Anti-Jam High Security Mail Shredder for Home Use(C149-C)",
+        "ABCCANOPY Instant Canopy SunWall 10x10 FT, 1 Pack Sidewall Only, White"
+      ]
+    },
+    {
+      "query_id": 94688,
+      "query": "small dog brush for yorkie",
+      "group": "plain",
+      "ndcg@10": 0.5748330137895973,
+      "judged_in_top10": 8,
+      "top10": [
+        "ConairPRO dog & cat Small Pin Brush",
+        "ROPO Dog Grooming Brush, Pet Shampoo Bath Brush Soothing Massage Rubber Comb with Adjustable Ring Handle for Long Short Haired Dogs and Cats 2pcs",
+        "Dog Brush Dog Grooming Brush Self Cleaning Slicker Brush and A Metal Comb - Professional Pet Grooming Brush for Small, Medium & Large Dogs, Cats and Rabbit - Including Hair-Shedding Pets",
+        "Glendan Dog Brush & Cat Brush- Slicker Pet Grooming Brush- Shedding Grooming Tools(Pink)",
+        "HARTZ, Groomer's Best Small Slicker Brush for Cats and Small Dogs, Black/Violet, 1 Count",
+        "KylePet Dog Brush, Double Sided Pet Slicker Brush with Bamboo Handle for Dogs and Cats Long Hair Pets Grooming Comb for Removing Shedding, Tangles and Dead Undercoat",
+        "SleekEZ Original Deshedding Grooming Tool for Dogs, Cats & Horses - Undercoat Brush for Short & Long Hair - Painlessly Remove 95% of Loose Hair, Fur & Dirt - Easy to Clean - USA Made - (2.5 inch)",
+        "Groomist Ball Tip Porcupine Pin Dog Brush, With Ergonomic Soft Grip Handle | Dog Brushes For Shedding and Detangling",
+        "Vibrating Dog Collar - NO Shock - Small Dog Training Collar with Remote - Fits Small Dogs Under 15 pounds (Between 5-15 lbs) - Vibration & Sound Only - 1,000 FT Range - Long Lasting Battery Life",
+        "Ultimate 2-in-1 Dog Grooming Brush Detangles & Massages Long Haired Dogs & Cats While Creating a Soft Coat Shine. Daily Grooming to Keep Your Dog's & Cat's hair smooth & tangle free. Happy Brushing."
+      ]
+    },
+    {
+      "query_id": 56898,
+      "query": "kamen rider build dx rabbit",
+      "group": "plain",
+      "ndcg@10": 0.8714545868221136,
+      "judged_in_top10": 10,
+      "top10": [
+        "BANDAI Kamen Rider Build DX Rabbit Evol Bottle & Dragon Evol Bottle Set",
+        "BandaiProduct Mask Rider Build Kamen Rider Build DX Special Set (1) Kamen Rider Build Rabbit Tank Form (2) Masked Rider Build Hedgehog Tank Form (3) Kamen Rider Build Rabbit Vacuum Cleaner Form",
+        "Bandai Kamen Rider Build DX Full Full Rabbit Tank Bottle",
+        "Bandai Kamen Rider Zi-O DX Build Rabbit Tank Hazard Form Ride Watch",
+        "Bandai Kamen Rider Build DX Gold Rabbit & Silver Dragon Full Bottle Set",
+        "Bandai Kamen Rider Build DX Cross-Z Build Can",
+        "Bandai Kamen Rider Build DX Build Driver & DX Rabbit Tank Sparkling & Full Bottle Holder & 9 Types Full Bottle Special Set Best Match ! are You Ready ?",
+        "Bandai Kamen Rider Build DX Furu Furu Rabbit Tank Bottle & Hazard Trigger Set",
+        "Bandai Kamen Rider Build DX Rabbit Tank Sparkling",
+        "Bandai Kamen Rider Build DX Build Driver"
+      ]
+    },
+    {
+      "query_id": 13411,
+      "query": "basic wiring circuit kit kids",
+      "group": "plain",
+      "ndcg@10": 0.6547216238913564,
+      "judged_in_top10": 7,
+      "top10": [
+        "REXQualis Electronics Basic Kit w/Power Supply Module, Breadboard, Jumper Wire, LED,Resistor, comes with more than 300pcs sensors and components for fun and simple electronic projects.",
+        "DEYUE 398 Electronic Starter Fun Kit Bundle | Basic Electronics Components Starter Kit | for Arduino, Raspberry Pi, STM32 | Power Supply Module, Power Adaptor, Jumper Wire",
+        "kuman Electronic Fun Bundle Learning Kit for Arduino Raspberry pi with Breadboard Cable Resistor, Capacitor, LED, Potentiometer (236 Items) K66",
+        "Organizer Upgraded Electronics Fun Kit w/Power Supply Module, Jumper Wire, Precision Potentiometer, 830 tie-Points Breadboard for Arduino, STM32",
+        "KEYESTUDIO Microbit Accessories STEM Starter Kit for BBC Micro:bit, Smart Honeycomb Wearable Breakout Board Coding Kit for Kids Teens",
+        "WayinTop Electronics Component Fun Kit w/E-Book, Upgraded Electronic Starter Kit with Breadboard Jumper Wires Kit, PCB Soldering Kit, LEDs & Resisitor Kit for Arduino/for Raspberry pi/ESP32/ESP8266",
+        "Hypertherm 851511 Consumable Kit, Powermax45 XP Essential Mechanized, 10-45 A, Cutting",
+        "Safety 1st Power Strip Cover for Baby Proofing",
+        "Smraza Super Starter Kit Project Kit with Breadboard, Power Supply, Jumper Wires, Resistors, LED, LCD 1602, Sensors, Detailed Tutorial for Project, Compatible with Arduino",
+        "N&T NIETING 1358Pcs Craft Kits for Kids Ages 4-8, Art Craft Supplies Include Pipe Cleaners, Pom Poms, Feather and Felt, Foam Balls,Storage Box - All in One DIY Toddler Crafts Set for School"
+      ]
+    },
+    {
+      "query_id": 48129,
+      "query": "gym set for men dumbells",
+      "group": "plain",
+      "ndcg@10": 0.7191184989488184,
+      "judged_in_top10": 7,
+      "top10": [
+        "Yaheetech 66LB Weight Dumbbell Set Fitness Adjustable Cap Gym/Home Barbell Plates Body Workout for Women and Men Strength Training",
+        "EDOSTORY Adjustable Dumbbell Set, 44LB/66LB/88LB Free Weights Dumbbells ,4 in 1 Set Barbell, Dumbbell, Kettlebell and Push-ups, Non-slip Handles, Push up, Fitness Home Gym for Men Women (44 LB)",
+        "Unipack Dumbbells 2 X 52.5 LBS Adjustable Cast Iron Set. Total 105 Lbs",
+        "JFIT Dumbbell Set w/Durable Rack, Double Neoprene Coated Workout Weights, Solid Design Rack, 32 LB Set",
+        "BalanceFrom BF-D358 Dumbbell Set with Stand, 32 lb",
+        "Fitness Republic Neoprene Weights Dumbbells Set, Hand Weights for Women Dumbells, 5 Set Weights Non-Slip, Hex Shape, Free Weight Dumbbell Sets - 5 Pairs Set (3lb,5lb,8lb,10lb & 12lb)",
+        "Marcy 40 Pound Vinyl Dumbbell Set with Adjustable Weights - Weight Set for Weightlifting and Body Building VB-40",
+        "CAP Barbell 150-lb Hex Dumbbell Weight Set with Vertical Rack",
+        "Ativafit Adjustable Dumbbell Fitness Dial Dumbbell with Handle and Weight Plate for Home Gym Note: Single (71.5 lbs)",
+        "Superior Pump Muscle Exercise for Beginners Massage Enlargement Device Gift Set for Men"
+      ]
+    },
+    {
+      "query_id": 50118,
+      "query": "hellboy toy",
+      "group": "plain",
+      "ndcg@10": 0.8738911120579488,
+      "judged_in_top10": 9,
+      "top10": [
+        "Hellboy Book And Figure Boxed Set",
+        "Big Blast Hellboy Action Figure",
+        "CAFELE Men's Hellboy Action Figure Collectible Toy for Decoration Gift 7 inch",
+        "Funko Dorbz: Hellboy- Hellboy",
+        "Mega Construx Probuilder Hellboy",
+        "1000 TOYS Hellboy Standard Version 1/12 Scale AF",
+        "Lucky Lian Men's Hellboy Action Figure Collectible Kid's Hellboy Figure Toys Birthday Gift",
+        "Dark Horse Comics - Hellboy pack 3 figurines 10 cm",
+        "Funko Pop Movies: Hellboy - Hellboy with Excalibur Vinyl Figure",
+        "The Waterboy"
+      ]
+    },
+    {
+      "query_id": 31053,
+      "query": "cute pajamas for teen girls",
+      "group": "plain",
+      "ndcg@10": 0.7235191413530525,
+      "judged_in_top10": 9,
+      "top10": [
+        "Pajamagram Teen Girls Pajamas - Girls Pajamas, Aqua Stars, 14",
+        "Big Girls Tank Top& Shorts Pajamas Set Size 18 - Summer Cute Cat Cool Cotton Blend Teens/Tween Pyjamas",
+        "Hotouch Pajamas for Teen Girls Tie Dye PJ Jogger Set for Women 2 Piece Sleepwear",
+        "Ekouaer Pajamas Women Short Sleeve with Plaid Shorts Cute Sleepwear Teen Girl Cartoon Sleep Tee Summer Lounge Pj Set Gift",
+        "SWOMOG Womens Pajama Sets Cute Pajama Sets Teen Girls Cartoon Printed 2 Piece Sleep Tee Set Soft Juniors Lounge Set Gift",
+        "U.S. Polo Assn. Womens Pajama Set - Short Sleeve PJs with Jogger Pajama Pants - Sleepwear Set Ideal for Lounging (Georgia Peach Heather, Large)",
+        "VENTELAN Pajamas for Women Cute Cartoon Sleep Tee Shirt Shorts Set Summer Sleepwear, White-Green, Small",
+        "Summer Pajamas for Girls \u2013 Stripe & Glittering Heart PJS Pal Cute Jammies Set Big Kids Size 10",
+        "Ekouaer Cute Sleep Short for Teen Girls Cotton Pajama Pants with Pockets Flannel Plaid PJ Bottoms Shorts Sleepwear(PAT11,M)",
+        "Calvin Klein Girls' Little 2 Piece Sleepwear Top and Bottom Long Pajama Set Pj, Short Sleeve-Delta Teal, Medium 7/8"
+      ]
+    },
+    {
+      "query_id": 71218,
+      "query": "mr clean bathroom lemon bathroom vlesner",
+      "group": "plain",
+      "ndcg@10": 0.4894526204699377,
+      "judged_in_top10": 8,
+      "top10": [
+        "Mr. Clean All Purpose Multi-Surface Pet Liquid Cleaner with Febreze Odor Defense | Has Odor Converters | Eliminates Odor - 45 Ounce Bottle (Pack of 2)",
+        "Mr. Clean, Deep Cleaning Mist Multi-Surface Spray, Lemon Zest Scent Refill, 1 Count, 16 Fl Ounce",
+        "Mr.Clean Clean Freak Deep Cleaning Mist Lavender 1-16 FL OZ Spray Bottle",
+        "Mr. Clean Freak Deep Cleaning Mist Multi-Surface Spray Lemon Zest Bundle, 1 Starter + 1 Refill",
+        "Mr. Clean Multipurpose Cleaning Solution with Febreze, 128 oz. Capacity Bottle, Meadows and Rain Scent",
+        "Mr. Clean Freak Deep Cleaning Mist Multi-Surface Spray Lavender Bundle, 1 Starter + 1 Refill",
+        "Mr. Clean All Purpose Multi-Surface Pet Liquid Cleaner with Febreze Odor Defense | Has Odor Converters | Eliminates Odor - 45 Ounce Each Bottle (Pack of 4)",
+        "P&G Professional Floor Cleaner from Mr. Clean Professional, Bulk Liquid Concentrate fro Hardwood, tile or Terrazo Floors, Commercial Use, Lemon Scent, 1 Gal. (Case of 3) - PGC02621CT,Yellow",
+        "Affresh Clean Home Bundle",
+        "Chemical Guys Clay_Block_KIT Clay Block V2 and Luber Surface Cleaner"
+      ]
+    },
+    {
+      "query_id": 5043,
+      "query": "6ft surfboard bag",
+      "group": "plain",
+      "ndcg@10": 0.826813366651774,
+      "judged_in_top10": 10,
+      "top10": [
+        "OCEANBROAD Surfboard Longboard Bag 6'0, 6'6, 7'0, 7'6, 8'0, 8'6, 9'0, 9'6, 10'0",
+        "South Bay Board Co. - Premium Surfboard Bags & SUP Paddle Board Bags (9' Surfboard Bag) (Grey, 6' Surfboard Bag)",
+        "Abahub Premium 6'0 x 22 Surfboard Travel Bag, Foam Padded Surf Board Cover, Shortboard Carrying Bags for Surfing, Outdoor, Airplane, Car, Truck",
+        "Dakine Daylight Surf Thruster Bag - White - 6'",
+        "Dakine Daylight Surfboard Bag-Thruster, White, 6'0\"",
+        "Creatures of Leisure Surfboard Travel Bag, 6ft 7in",
+        "Curve Surfboard Bag Day Surfboard Cover - Supermodel SHORTBOARD Size 5'6 to 7'2 (6'0)",
+        "Curve New Surfboard Bag Mini Simmons Surfboard Day Cover - Supermodel Retro Size 5'3 to 6'3 (5'3 Retro)",
+        "PAMGEA Surfboard Cover (Hybrid, 6'0\")",
+        "Dakine Daylight Deluxe Thruster Bag, Charcoal, 6-Feet 2-Inch"
+      ]
+    },
+    {
+      "query_id": 96432,
+      "query": "space base board game",
+      "group": "plain",
+      "ndcg@10": 0.4983531543597976,
+      "judged_in_top10": 9,
+      "top10": [
+        "Space Base",
+        "Splendor Board Game (Base Game) | Family Board Game | Board Game for Adults and Family | Strategy Game | Ages 10+ | 2 to 4 players | Average Playtime 30 minutes | Made by Space Cowboys",
+        "Dominion Big Box II Board Game",
+        "Space Base: Command Station",
+        "CATAN Starfarers Board Game 2nd Ed. (Base Game) | Family Board Game for Adults and Kids | Adventure Board Game | Ages 14+ | 3 to 4 players | Average Playtime 120 minutes | Made by Catan Studio",
+        "Happy Little Dinosaurs Base Game",
+        "Hasbro Gaming Ouija Board Game",
+        "MONOPOLY: Space Jam A New Legacy Edition Family Board Game, Strategy Game, Kids Ages 8 and Up, Lebron James Space Jam Game, Shoot Hoops",
+        "Splendor Marvel Board Game | Family Board Game | Board Game for Adults and Family | Super Heroes Strategy Game | Ages 10+ | 2 to 4 players | Average Playtime 30 minutes | Made by Space Cowboys",
+        "Catan Board Game (Base Game) | Family Board Game | Board Game for Adults and Family | Adventure Board Game | Ages 10+ | for 3 to 4 Players | Average Playtime 60 Minutes | Made by Catan Studio"
+      ]
+    },
+    {
+      "query_id": 75831,
+      "query": "opi meet a boy as cute as can be",
+      "group": "plain",
+      "ndcg@10": 0.0,
+      "judged_in_top10": 1,
+      "top10": [
+        "Opie And The Bully",
+        "This Boy's Life",
+        "A friendly Game/Sentimental Sponge",
+        "Christmas with a Prince",
+        "OPI Mini Cuticle Nipper",
+        "#FollowMe Adult Onesie / Pajamas, Dalmation, Large",
+        "All the Ugly and Wonderful Things: A Novel",
+        "Looking for Someone [Explicit]",
+        "Peace Breaks Out",
+        "Pebble | Handmade Octopus Baby Rattle\u2014Green Striped | Ocean | Beach | Coastal | Crochet Baby Toy | Fair Trade | Machine Washable"
+      ]
+    },
+    {
+      "query_id": 108075,
+      "query": "veganise mayonnaise",
+      "group": "plain",
+      "ndcg@10": 0.6588384764235892,
+      "judged_in_top10": 10,
+      "top10": [
+        "Thrive Market Non-GMO Vegan Mayonnaise",
+        "VMayo | 190ml | Chilli Mash Company | British Made Vegan Mayonnaise",
+        "Follow Your Heart Egg Free, Non-GMO, Original Vegenaise Vegan Mayo (16 ounce Pack of 6)",
+        "FOLLOW YOUR HEART Soy Free Vegenaise, 16 FZ",
+        "Hampton Creek Just Mayo Vegan Eggless Soy-Free Kosher Mayonnaise - Pack of 2",
+        "Best Foods Vegan Dressing and Spread for a Rich, Creamy Plant-Based Alternative to Mayo Plant-Based Mayonnaise Free From Eggs 24 Oz",
+        "Hellmann's Vegan Dressing and Spread for A Rich, Creamy Plant-Based Alternative to Mayonnaise Vegan Dressing and Spread Plant Based Alternative to Mayo Free From Eggs 24 oz",
+        "Kraft Mayo with Avocado Oil Reduced Fat Mayonnaise (30 fl oz Jar)",
+        "Follow Your Heart Non-GMO Vegenaise Soy Free Better Than Mayo Dressing, 32 Ounce (Pack of 6)",
+        "Sir Kensington's Vegan Mayo Classic Keto Diet Certified Gluten Free Certified Vegan Soy Free Non- GMO Project Verified Shelf-Stable 12 oz"
+      ]
+    },
+    {
+      "query_id": 101719,
+      "query": "thackeray greek grammar",
+      "group": "plain",
+      "ndcg@10": 0.47557011408718985,
+      "judged_in_top10": 10,
+      "top10": [
+        "Grammar of New Testament Greek ... Translated by Henry St. John Thackeray",
+        "Grammar of New Testament Greek / by Friedrich Blass ; translated by Henry St. John Thackeray",
+        "Basics of Biblical Greek Grammar",
+        "Oxford Grammar of Classical Greek",
+        "Grammar of New Testament Greek",
+        "Reading Greek: Grammar and Exercises",
+        "Greek Grammar [Revised Edition]",
+        "A grammar of the Old Testament in Greek ; vol. 1 : introduction, orthography and accidence",
+        "Essential Modern Greek Grammar (Dover Language Guides Essential Grammar)",
+        "A Grammar of the Old Testament in Greek According to the Septuagint; Volume 1"
+      ]
+    },
+    {
+      "query_id": 114182,
+      "query": "x shot",
+      "group": "plain",
+      "ndcg@10": 0.23897213284442367,
+      "judged_in_top10": 4,
+      "top10": [
+        "X-Men Secret Weapon Force: Gambit Power Slammer, 5\" Poseable Action Figure with Rapid-Fire Slamming Action",
+        "Zuru X-Shot 50 Dart Refill Pack",
+        "Pilot",
+        "XShot X-Shot-Excel-Xcess TK-12(12Darts) by Zuru",
+        "Sony Cyber-shot DSC-RX100M3/B Digital Camera RX100 III | Black (Renewed)",
+        "Champion Men's Classic Jersey Script T-Shirt, scarlet, X-Large",
+        "XShot Excel Hawk Eye Foam Dart Blaster with 5 Shooting Targets & 12 Darts by ZURU (Frustration Free Packaging)",
+        "XShot Excel Turbo Fire Foam Dart Blaster with Slam-Fire Function + 48 Darts by Zuru",
+        "Vortex Optics Crossfire Red Dot Sight (CF-RD2) & 3X Magnifier w/Built-in Flip Mount (VMX-3T)",
+        "Rothco Tactical Airsoft Combat Shirt, Desert Digital Camo, X-Large"
+      ]
+    },
+    {
+      "query_id": 36265,
+      "query": "e katerina",
+      "group": "plain",
+      "ndcg@10": 0.038367902601808127,
+      "judged_in_top10": 2,
+      "top10": [
+        "Young Catherine",
+        "Coraline",
+        "Hanna",
+        "Selena",
+        "1",
+        "Driving Miss Kim",
+        "Anukunnadi Okati Ayinadi Okati",
+        "Catherine the Great: Portrait of a Woman",
+        "Pilot",
+        "Know."
+      ]
+    },
+    {
+      "query_id": 35391,
+      "query": "dreamville & earthgang & j. cole",
+      "group": "plain",
+      "ndcg@10": 0.46474716285608947,
+      "judged_in_top10": 4,
+      "top10": [
+        "Down Bad [Clean] [feat. JID & Bas & J. Cole & EARTHGANG & Young Nudy]",
+        "Down Bad [Clean] [feat. JID & Bas & J. Cole & EARTHGANG & Young Nudy]",
+        "Down Bad [feat. JID & Bas & J. Cole & EARTHGANG & Young Nudy] [Explicit]",
+        "Down Bad [feat. JID & Bas & J. Cole & EARTHGANG & Young Nudy] [Explicit]",
+        "String Quintet & Quartet",
+        "Joytime",
+        "DESPERATE YOUTH, BLOOD THIRSTY [Vinyl]",
+        "Moonbound: Apollo 11 and the Dream of Spaceflight",
+        "Dreamgirl Men's Dirt Cop Officer Ed Banger Costume, Black, X-Large",
+        "Pebble & The Penguin/ Rock-A-Doodle (Two-Pack)"
+      ]
+    },
+    {
+      "query_id": 90935,
+      "query": "school pageant dresses for 16 year olds",
+      "group": "plain",
+      "ndcg@10": 0.5395118145574667,
+      "judged_in_top10": 9,
+      "top10": [
+        "Girls Dresses Girl Lace Casual Dress for Christmas Party Pageant Bridesmaid Church Girls Dresses 7-16 Vintage Long Sleeve Formal Dresses for Girls (Size 14-16 Years)=LS Navy Blue-190",
+        "Girls Sleeveless Embroidery Princess Long Pageant Dress Floor Length Lace Tulle First Communion Wedding Birthday Party A Line Dresses Kids Holiday Formal Prom Dance Evening Ball Gown Red 16-17",
+        "Little Big Girls\u2019Tulle Retro Vintage Dresses Flower Lace Pageant Party Wedding Floor Length Dance Evening Gown White #1 15-16 Years",
+        "Bow Dream Flower Girl's Dress Chiffon V-Neckline Pageant Birthday Party School Dancewear Bridesmaid Dress Peacock Blue 16",
+        "The Children's Place Girl's Skinny Chino Pants, Sandy, 16",
+        "Flower Girl Lace Dress for Kids Wedding Bridesmaid Pageant Party Prom Formal Ball Gown Princess Puffy Tulle Dresses Royal Blue size 14-15 Years",
+        "DOCHEER aibeiboutique Flower Girl Dresses Pageant Princess Bridesmaid Dress for Wedding First Communion (15-16 Years, Pink)",
+        "Little Big Girl Ruffles Lace Vintage Sleeveless Embroidery Princess Dress Tulle Flower Pageant Wedding Long Prom Dance Evening Ball Gowns Purple 15-16 Years",
+        "TTYAOVO Girls Embroidered Princess Pageant Ball Gowns Wedding Party Dress Size 11-12 Years Peach",
+        "Flower Girls Tulle Lace Bridesmaid Dress School Girls Communion Ball Gowns Pageant Birthday Party Wedding Evening Dress Turquoise 15-16"
+      ]
+    },
+    {
+      "query_id": 102507,
+      "query": "the witcher soundtrack",
+      "group": "plain",
+      "ndcg@10": 0.914856882358379,
+      "judged_in_top10": 10,
+      "top10": [
+        "The Witcher (Original Game Soundtrack)",
+        "The Witcher (Music from the Netflix Original Series)",
+        "The Witcher 3: Wild Hunt (Original Game Soundtrack)",
+        "The Witcher 3: Wild Hunt - Blood and Wine (Official Soundtrack)",
+        "The Witcher Theme (Piano Solo) [Original Series Soundtrack]",
+        "The Witcher 2: Assassins Of Kings (Enhanced Edition) (Original Game Soundtrack)",
+        "The Witcher 3: Wild Hunt - Hearts Of Stone (Original Game Soundtrack)",
+        "The Witcher",
+        "Witcher",
+        "Witcher"
+      ]
+    }
+  ]
+}

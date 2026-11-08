@@ -1,0 +1,21 @@
+# .dockerignore
+#
+# .gitignoreと同じ書き方だが、意味が違う: これは「COPY . . の対象から除外する」
+# ファイル一覧。特に .env はAPIキーが入っているので、イメージに焼き込まれないよう
+# 必ず除外する(除外しないと、イメージを配布した瞬間にAPIキーが漏れる)。
+
+.env
+.git/
+.venv/
+__pycache__/
+*.pyc
+chroma_db/
+checkpoints.sqlite
+files/
+.chainlit/
+data/resume/
+data/applications/
+data/external/
+data/tuebingen/receipts_raw/
+notebooks/
+src/ml/models/
