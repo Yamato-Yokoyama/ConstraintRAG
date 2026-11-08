@@ -1,0 +1,410 @@
+<title>Negation Search Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<!-- ✍️ Claude wrote this page (2026-11-07, trial at Yamato's request). Data: app/src/export_viewer.py -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+JP:wght@400;600&display=swap">
+<style>
+/* Layout: an instrument console. Header picks a query, the map shows the search, the right rail reads out the top 10. */
+:root {
+  color-scheme: dark;
+  --bg: #0f151d; --panel: #161e29; --line: #2a3644; --fg: #e4eaf1; --muted: #93a1b1;
+  --query: #6ea8fe; --exact: #4cc38a; --near: #e8bd4a; --bad: #ef6b6b; --none: #8291a3;
+  --body: "IBM Plex Sans JP", "Hiragino Sans", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); box-sizing: border-box;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 12px; }
+*, *::before { box-sizing: border-box; }
+button, input, select { font: inherit; color: var(--fg); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; }
+button { cursor: pointer; }
+button:hover { border-color: var(--query); }
+:focus-visible { outline: 2px solid var(--query); outline-offset: 1px; }
+#app { height: 100%; min-height: 620px; display: flex; flex-direction: column; gap: 10px; }
+.top { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+h1 { font-size: 18px; margin: 0; }
+#search { flex: 1 1 240px; min-width: 0; font-family: var(--mono); }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; position: relative; }
+.chip { border-radius: 999px; font-size: 12px; font-family: var(--mono); max-width: 100%; overflow-wrap: anywhere; }
+.chip.on { border-color: var(--query); color: var(--query); }
+#menu { position: absolute; z-index: 5; top: 100%; right: 0; margin-top: 4px; width: min(420px, 100%); max-height: 60vh; overflow: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px; }
+#menu h2 { font-size: 12px; color: var(--muted); margin: 8px 4px 4px; font-weight: 400; }
+#menu button { display: flex; justify-content: space-between; gap: 10px; width: 100%; text-align: left; border: 0; font-family: var(--mono); font-size: 12px; }
+#menu button:hover { background: var(--line); }
+.status { display: flex; gap: 8px 18px; flex-wrap: wrap; align-items: baseline; border-block: 1px solid var(--line); padding-block: 8px; font-size: 13px; color: var(--muted); }
+.status b { font-family: var(--mono); font-size: 18px; color: var(--fg); font-variant-numeric: tabular-nums; }
+.status .step b { font-size: 14px; }
+.status b.warn { color: var(--bad); } .status b.good { color: var(--exact); }
+.status .spacer { flex: 1; }
+.main { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 400px); gap: 10px; }
+.mapwrap { position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; min-height: 380px; overflow: hidden; }
+canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+#tip { position: absolute; z-index: 2; max-width: 300px; pointer-events: none; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 5px 8px; font-size: 12px; }
+#phase { position: absolute; left: 12px; top: 10px; font-size: 13px; pointer-events: none; }
+.legend { position: absolute; left: 12px; bottom: 10px; display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; color: var(--muted); pointer-events: none; }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 4px; }
+.rail { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: auto; padding: 10px; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.rail h2 { font-size: 13px; margin: 0; font-weight: 600; }
+.note { font-size: 12px; color: var(--muted); margin: 0; line-height: 1.6; }
+.hit { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 8px; padding: 7px; border: 1px solid var(--line); border-left: 4px solid var(--c); border-radius: 4px; width: 100%; text-align: left; background: transparent; opacity: 0; transition: opacity .25s; font-size: 12px; line-height: 1.45; }
+.hit.show { opacity: 1; }
+.hit.pin { background: var(--line); }
+.hit .r, .hit .s { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.hit .tag { display: block; margin-top: 3px; color: var(--c); font-size: 11px; }
+.hit .trap { color: var(--bad); font-weight: 600; margin-left: 6px; }
+.hit p { margin: 5px 0 0; color: var(--muted); overflow-wrap: anywhere; }
+.story { font-size: 14px; line-height: 1.6; margin: 0; }
+.story mark, .hit mark { background: transparent; font-weight: 600; border-radius: 3px; padding: 0 2px; }
+mark.neg { color: var(--query); outline: 1px solid var(--query); }
+mark.trap { color: var(--bad); outline: 1px solid var(--bad); }
+mark.ok { color: var(--exact); outline: 1px solid var(--exact); }
+.tabs { display: flex; gap: 6px; }
+.tabs button[aria-selected="true"] { border-color: var(--query); color: var(--query); }
+.steps { display: flex; flex-wrap: wrap; gap: 4px; font-size: 12px; list-style: none; margin: 0; padding: 0; }
+.steps li { padding: 4px 8px; border: 1px solid var(--line); border-radius: 4px; color: var(--muted); }
+.steps li.on { border-color: var(--query); color: var(--fg); }
+.left { display: flex; flex-direction: column; gap: 8px; min-width: 0; min-height: 0; }
+.left .mapwrap { flex: 1; }
+#treewrap { flex: 1; min-height: 380px; overflow: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+#tree { display: block; }
+#tree text { font-size: 11px; fill: var(--fg); font-family: var(--body); dominant-baseline: middle; }
+#tree .count { font-family: var(--mono); fill: var(--muted); font-size: 10px; }
+#tree .link { fill: none; stroke: var(--line); stroke-width: 1; transition: stroke .3s, opacity .3s; }
+#tree .link.lit { stroke: var(--query); stroke-width: 1.5; }
+#tree .link.hit { stroke: var(--near); stroke-width: 2.5; }
+#tree .dimmed { opacity: .3; }
+#tree .node { transition: opacity .3s; }
+#tree rect.box { fill: var(--bg); stroke: var(--line); transition: stroke .3s; }
+#tree rect.box.hit { stroke: var(--near); stroke-width: 2; }
+#tree .bar { fill: var(--line); }
+#tree .fill { fill: var(--query); transition: width .8s; }
+#tree .out { fill: none; stroke-width: 1.4; opacity: .7; }
+#tree .out.focus { stroke-width: 3; opacity: 1; }
+.why { display: block; margin-top: 4px; color: var(--fg); }
+.calc { font-family: var(--mono); font-size: 12px; border: 1px solid var(--line); border-radius: 4px; padding: 7px; line-height: 1.6; overflow-wrap: anywhere; }
+.legend.flat { position: static; }
+@media (max-width: 800px) { html, body { height: auto; } #app { height: auto; } .main { grid-template-columns: minmax(0, 1fr); } .mapwrap { height: 70vw; } .status .spacer { display: none; } }
+@media (prefers-reduced-motion: reduce) { .hit { transition: none; } }
+</style>
+
+<div id="app">
+  <form class="top" id="form">
+    <h1>Negation Search Map</h1>
+    <input id="search" aria-label="質問を検索" placeholder="記録済みの質問から探す" autocomplete="off">
+    <button>検索</button>
+    <button type="button" id="replay">もう一度再生</button>
+    <select id="speed" aria-label="再生速度"><option value="2">×0.5</option><option value="1" selected>×1</option><option value="0.5">×2</option></select>
+  </form>
+  <div class="chips" id="chips"></div>
+  <div class="status" id="status"></div>
+  <div class="main">
+    <div class="left">
+      <p class="story" id="story"></p>
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="tabTree" aria-selected="true">ツリー</button>
+        <button type="button" role="tab" id="tabMap" aria-selected="false">地図</button>
+      </div>
+      <ol class="steps" id="steps"></ol>
+      <div id="treewrap"><svg id="tree" role="img" aria-label="カテゴリのツリー。検索で反応した商品数と上位10件が入った枝を示す"></svg></div>
+      <div class="mapwrap" id="wrap" hidden>
+        <canvas id="map" role="img" aria-label="全商品を2次元に置いた地図。検索で反応した商品と上位10件を色で示す"></canvas>
+        <div id="tip" hidden></div>
+      </div>
+      <div class="legend flat">
+        <span><i class="dot" style="background:var(--exact)"></i>Exact</span>
+        <span><i class="dot" style="background:var(--near)"></i>Substitute / Complement</span>
+        <span><i class="dot" style="background:var(--bad)"></i>Irrelevant</span>
+        <span><i class="dot" style="background:var(--none)"></i>未判定</span>
+        <span style="color:var(--bad)">✕ 除外語あり（罠）</span>
+      </div>
+      <p class="note" id="phase"></p>
+    </div>
+    <aside class="rail">
+      <h2 id="railTitle">上位10件</h2>
+      <div class="calc" id="calc"></div>
+      <div id="hits" style="display:flex;flex-direction:column;gap:6px"></div>
+      <p class="note">カテゴリは商品のエンベディングを KMeans でまとめたもので、Amazon の公式分類ではありません。大カテゴリの名前は Claude が付け、サブカテゴリの名前はタイトルの頻出語です。検索はカテゴリで絞らず、全件から直接行っています。ツリーは結果がどの枝に入ったかを示すものです。地図は1024次元を2次元に縮めた表示用で、遠近は大まかです。質問の位置は上位10件の中心に置いています。</p>
+    </aside>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const C = { query: css('--query'), E: css('--exact'), S: css('--near'), C: css('--near'), I: css('--bad'), none: css('--none'), fg: css('--fg'), bg: css('--bg'), dim: '#55657a' };
+const LABEL = { E: 'Exact', S: 'Substitute', C: 'Complement', I: 'Irrelevant' };
+const colorOf = h => C[h.label] || C.none;
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const canvas = $('map'), ctx = canvas.getContext('2d'), base = document.createElement('canvas');
+let map, runs, run, W = 0, H = 0, startAt = 0, raf = 0, pinned = null, top10 = [];
+const PAD = 26;
+const px = p => [PAD + p[0] * (W - 2 * PAD), PAD + (1 - p[1]) * (H - 2 * PAD)];
+const esc = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const mean = (rows, f) => rows.reduce((a, r) => a + f(r), 0) / rows.length;
+
+function resize() {
+  const r = $('wrap').getBoundingClientRect(), d = devicePixelRatio || 1;
+  W = r.width; H = r.height;
+  for (const c of [canvas, base]) { c.width = W * d; c.height = H * d; c.getContext('2d').setTransform(d, 0, 0, d, 0, 0); }
+  const b = base.getContext('2d');
+  b.fillStyle = C.dim; b.globalAlpha = .5;
+  for (const p of map.xy) { const [x, y] = px(p); b.fillRect(x - .9, y - .9, 1.8, 1.8); }
+  if (run) draw(1e9);
+}
+
+// Timeline in ms at ×1: query embeds, then products react, then only the top 10 stay.
+const T = { embed: 700, react: 1900, narrow: 1200 };
+const SVG = 'http://www.w3.org/2000/svg';
+const ROW = 22, TX = { root: 8, major: 60, sub: 210, bar: 350, rank: 700 };
+let treeBuilt = false, rows = [], majorsY = [], treeH = 0;
+function el(parent, name, attrs, text) {
+  const e = document.createElementNS(SVG, name);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (text !== undefined) e.textContent = text;
+  parent.appendChild(e); return e;
+}
+const curve = (x1, y1, x2, y2) => { const m = (x1 + x2) / 2; return `M${x1} ${y1}C${m} ${y1} ${m} ${y2} ${x2} ${y2}`; };
+const cut = (s, n) => s.length > n ? s.slice(0, n - 1) + '…' : s;
+function buildTree() {
+  const svg = $('tree'); svg.innerHTML = ''; rows = []; majorsY = [];
+  let y = ROW;
+  map.tree.forEach((m, mi) => {
+    const first = y;
+    m.subs.forEach(s => { rows.push({ name: s.name, n: s.n, major: mi, y }); y += ROW; });
+    majorsY.push({ name: m.name, y: (first + y - ROW) / 2 }); y += 6;
+  });
+  treeH = y + ROW;
+  svg.setAttribute('viewBox', `0 0 760 ${treeH}`); svg.setAttribute('width', 760); svg.setAttribute('height', treeH);
+  const midY = treeH / 2, maxN = Math.max(...rows.map(r => r.n));
+  majorsY.forEach((m, i) => {
+    m.link = el(svg, 'path', { class: 'link', d: curve(TX.root + 40, midY, TX.major, m.y) });
+    m.g = el(svg, 'g', { class: 'node' });
+    m.box = el(m.g, 'rect', { class: 'box', x: TX.major, y: m.y - 10, width: 124, height: 20, rx: 4 });
+    el(m.g, 'text', { x: TX.major + 6, y: m.y }, cut(m.name, 11));
+  });
+  el(svg, 'rect', { class: 'box', x: TX.root, y: midY - 22, width: 40, height: 44, rx: 4 });
+  el(svg, 'text', { x: TX.root + 5, y: midY - 7 }, '全');
+  el(svg, 'text', { x: TX.root + 5, y: midY + 8 }, map.xy.length);
+  rows.forEach(r => {
+    r.link = el(svg, 'path', { class: 'link', d: curve(TX.major + 124, majorsY[r.major].y, TX.sub, r.y) });
+    r.g = el(svg, 'g', { class: 'node' });
+    r.box = el(r.g, 'rect', { class: 'box', x: TX.sub, y: r.y - 9, width: 132, height: 18, rx: 3 });
+    el(r.g, 'text', { x: TX.sub + 5, y: r.y }, cut(r.name, 20));
+    r.w = 170 * r.n / maxN;
+    el(r.g, 'rect', { class: 'bar', x: TX.bar, y: r.y - 4, width: r.w, height: 8 });
+    r.fill = el(r.g, 'rect', { class: 'fill', x: TX.bar, y: r.y - 4, width: 0, height: 8 });
+    r.count = el(r.g, 'text', { class: 'count', x: TX.bar + 174, y: r.y }, '');
+  });
+  $('outs') && $('outs').remove();
+  el(svg, 'g', { id: 'outs' });
+  treeBuilt = true;
+}
+// Fills the tree for the selected query. Branches stay visible: this search does not prune.
+function prepareTree() {
+  if (!treeBuilt) buildTree();
+  const counts = new Array(rows.length).fill(0);
+  run.reacted.forEach(([idx]) => counts[map.sub[idx]]++);
+  rows.forEach((r, i) => { r.reacted = counts[i]; r.tops = []; });
+  run.hits.forEach((h, i) => rows[map.sub[top10[i]]].tops.push(i));
+  const outs = $('outs'); outs.innerHTML = '';
+  const gap = Math.max(ROW + 6, (treeH - 2 * ROW) / 10);
+  const start = (treeH - gap * 9) / 2;
+  run.hits.forEach((h, i) => {
+    const r = rows[map.sub[top10[i]]], y = start + i * gap;
+    const g = el(outs, 'g', { 'data-i': i, style: 'cursor:pointer' });
+    g.line = el(g, 'path', { class: 'out', stroke: colorOf(h), d: curve(TX.bar + 200, r.y, TX.rank, y) });
+    el(g, 'circle', { cx: TX.rank + 10, cy: y, r: 10, fill: colorOf(h) });
+    el(g, 'text', { x: TX.rank + 10, y, 'text-anchor': 'middle', style: `fill:${C.bg};font-family:var(--mono);font-weight:600` }, h.rank);
+    if (h.trap) el(g, 'text', { x: TX.rank + 26, y, style: `fill:${C.I};font-weight:600;font-size:13px` }, '✕');
+    g.onmouseenter = () => { if (!document.querySelector('.hit.pin')) { pinned = i; draw(1e9); } };
+    g.onmouseleave = () => { if (!document.querySelector('.hit.pin')) { pinned = null; draw(1e9); } };
+    g.onclick = () => document.querySelector(`.hit[data-i="${i}"]`).click();
+  });
+}
+function drawTree(reactP, narrowP, shown) {
+  rows.forEach(r => {
+    const on = reactP > 0 && r.reacted > 0, hit = narrowP > 0 && r.tops.some(i => i < shown);
+    r.fill.setAttribute('width', reactP > 0 ? r.w * Math.min(1, r.reacted * reactP / r.n * 1) : 0);
+    r.count.textContent = reactP > 0 ? `${Math.round(r.reacted * reactP)} / ${r.n}` : `${r.n}`;
+    r.link.setAttribute('class', 'link' + (hit ? ' hit' : on ? ' lit' : ''));
+    r.box.setAttribute('class', 'box' + (hit ? ' hit' : ''));
+    const dim = (narrowP >= 1 && !r.tops.length);
+    r.g.classList.toggle('dimmed', dim); r.link.classList.toggle('dimmed', dim);
+  });
+  majorsY.forEach((m, i) => {
+    const mine = rows.filter(r => r.major === i);
+    const on = reactP > 0 && mine.some(r => r.reacted), hit = narrowP > 0 && mine.some(r => r.tops.some(t => t < shown));
+    m.link.setAttribute('class', 'link' + (hit ? ' hit' : on ? ' lit' : ''));
+    m.box.setAttribute('class', 'box' + (hit ? ' hit' : ''));
+    const dim = narrowP >= 1 && !mine.some(r => r.tops.length);
+    m.g.classList.toggle('dimmed', dim); m.link.classList.toggle('dimmed', dim);
+  });
+  [...$('outs').children].forEach((g, i) => {
+    g.style.display = i < shown ? '' : 'none';
+    g.line.setAttribute('class', 'out' + (pinned === i ? ' focus' : ''));
+  });
+}
+function draw(t) {
+  const reactEnd = T.embed + T.react, end = reactEnd + T.narrow;
+  const rP = Math.min(1, Math.max(0, (t - T.embed) / T.react)), nP = Math.min(1, Math.max(0, (t - reactEnd) / T.narrow));
+  const nShown = t >= end ? 10 : Math.floor(nP * 10);
+  drawTree(rP, nP, nShown);
+  const stage = t < T.embed ? 0 : t < reactEnd ? 1 : t < end ? 2 : 3;
+  [...$('steps').children].forEach((li, i) => li.classList.toggle('on', i === stage));
+  document.querySelectorAll('.hit').forEach((e, i) => e.classList.toggle('show', i < nShown));
+  if (!W || !H) return t < end;
+  ctx.clearRect(0, 0, W, H);
+  ctx.drawImage(base, 0, 0, W, H);
+  const pos = px(run.position);
+  const reactP = Math.min(1, Math.max(0, (t - T.embed) / T.react));
+  const narrowP = Math.min(1, Math.max(0, (t - reactEnd) / T.narrow));
+  const lit = Math.floor(reactP * run.reacted.length), lo = run.reacted.at(-1)[1], hi = run.reacted[0][1];
+  ctx.fillStyle = C.query;
+  for (let i = 10; i < lit; i++) {
+    const [idx, s] = run.reacted[i], [x, y] = px(map.xy[idx]);
+    ctx.globalAlpha = (1 - narrowP) * (.25 + .75 * (s - lo) / (hi - lo || 1));
+    ctx.beginPath(); ctx.arc(x, y, 2.4, 0, 7); ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+  // Top 10: lines from the query, drawn in rank order.
+  const shown = t >= end ? 10 : Math.floor(narrowP * 10);
+  for (let i = Math.min(lit, 10) - 1; i >= 0; i--) {
+    const h = run.hits[i], [x, y] = px(map.xy[top10[i]]), on = i < shown, focus = pinned === i;
+    if (on) {
+      ctx.strokeStyle = colorOf(h); ctx.globalAlpha = pinned === null || focus ? .55 : .12; ctx.lineWidth = focus ? 2 : 1;
+      ctx.beginPath(); ctx.moveTo(...pos); ctx.lineTo(x, y); ctx.stroke(); ctx.globalAlpha = 1;
+    }
+    ctx.fillStyle = on ? colorOf(h) : C.query;
+    ctx.beginPath(); ctx.arc(x, y, on ? (focus ? 11 : 8) : 3, 0, 7); ctx.fill();
+    if (on) {
+      ctx.fillStyle = C.bg; ctx.font = '600 10px ' + css('--mono'); ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText(i + 1, x, y + .5);
+      if (h.trap) { ctx.strokeStyle = C.I; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, (focus ? 11 : 8) + 2.5, 0, 7); ctx.stroke();
+        ctx.fillStyle = C.I; ctx.font = '600 11px ' + css('--mono'); ctx.fillText('✕', x + 13, y - 9); }
+    }
+  }
+  // Query marker with a pulse while embedding.
+  const pulse = t < T.embed ? 8 + 14 * (t / T.embed) : 7;
+  ctx.strokeStyle = C.fg; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(...pos, pulse, 0, 7); ctx.stroke();
+  ctx.fillStyle = C.fg; ctx.beginPath(); ctx.arc(...pos, 3, 0, 7); ctx.fill();
+
+  return t < end;
+}
+
+function play() {
+  cancelAnimationFrame(raf);
+  const speed = +$('speed').value;
+  if (reduced) { draw(1e9); return; }
+  startAt = performance.now();
+  const loop = now => { if (draw((now - startAt) / speed)) raf = requestAnimationFrame(loop); else draw(1e9); };
+  raf = requestAnimationFrame(loop);
+}
+
+function marked(text, spans) {
+  let out = '', at = 0;
+  for (const s of spans || []) {
+    if (s.s < at) continue;
+    out += esc(text.slice(at, s.s)) + `<mark class="${s.kind}">${esc(text.slice(s.s, s.e))}</mark>`;
+    at = s.e;
+  }
+  return out + esc(text.slice(at));
+}
+function storyOf(r) {
+  if (r.group !== 'negated') return `通常の質問「${esc(r.query)}」の結果です。上位10件のうち Exact は ${r.exact_in_top10} 件でした。`;
+  const q = r.query.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]))
+    .replace(/\b(without|not|no|non|except|excluding|free)\b/gi, '<mark class="neg">$1</mark>');
+  return `「${q}」は「${esc(r.excluded_term)}」を除外したい質問です。上位10件のうち <mark class="trap">${r.trap_in_top10}件に除外語が入っています</mark>。Exact は ${r.exact_in_top10} 件です。`;
+}
+function showTab(tree) {
+  $('tabTree').setAttribute('aria-selected', tree); $('tabMap').setAttribute('aria-selected', !tree);
+  $('treewrap').hidden = !tree; $('wrap').hidden = tree;
+  if (run) play();
+}
+$('tabTree').onclick = () => showTab(true);
+$('tabMap').onclick = () => showTab(false);
+
+function select(r) {
+  run = r; pinned = null; top10 = r.reacted.slice(0, 10).map(x => x[0]);
+  $('search').value = r.query;
+  $('railTitle').textContent = '上位10件：' + r.query;
+  prepareTree();
+  const branches = rows.filter(x => x.reacted).length, hitBranches = rows.filter(x => x.tops.length).length;
+  $('steps').innerHTML = [
+    '① 質問をベクトルにする',
+    `② 全${map.xy.length.toLocaleString()}件と比べる：近い${r.reacted.length}件は${branches}枝に分布`,
+    `③ 上位10件は${hitBranches}枝から`,
+    `④ 採点：nDCG ${r['ndcg@10'].toFixed(3)}`,
+  ].map(s => `<li>${s}</li>`).join('');
+  $('story').innerHTML = storyOf(r);
+  $('calc').innerHTML = `DCG ${r.dcg.toFixed(3)} ÷ 理想 ${r.ideal_dcg.toFixed(3)} = nDCG ${r['ndcg@10'].toFixed(3)}<br>各商品の点 = gain ÷ log2(順位+1)。gain は E 1.0、S 0.1、C 0.01、I と未判定 0`;
+  document.querySelectorAll('.chip[data-id]').forEach(c => c.classList.toggle('on', +c.dataset.id === r.query_id));
+  $('menu').hidden = true;
+  const same = runs.filter(x => x.group === r.group), neg = r.group === 'negated';
+  $('status').innerHTML = `
+    <span class="step">質問のベクトル化 <b>${r.timing_ms.embed.toFixed(0)}ms</b></span>
+    <span class="step">検索 <b>${r.timing_ms.search.toFixed(0)}ms</b></span>
+    <span class="spacer"></span>
+    <span>Exact <b class="${r.exact_in_top10 >= 5 ? 'good' : ''}">${r.exact_in_top10}/10</b></span>
+    ${neg ? `<span>除外語「${esc(r.excluded_term)}」の罠 <b class="${r.trap_in_top10 ? 'warn' : 'good'}">${r.trap_in_top10}/10</b></span>` : ''}
+    <span>nDCG@10 <b>${r['ndcg@10'].toFixed(3)}</b></span>
+    <span>${neg ? '否定' : '通常'}${same.length}問の平均 nDCG ${mean(same, x => x['ndcg@10']).toFixed(3)}・Exact ${mean(same, x => x.exact_in_top10).toFixed(1)}/10</span>`;
+  $('hits').innerHTML = r.hits.map((h, i) => `
+    <button class="hit" data-i="${i}" style="--c:${colorOf(h)}">
+      <span class="r">${h.rank}</span>
+      <span>${marked(h.title, h.spans)}${h.trap ? '<span class="trap">✕ 罠</span>' : ''}
+        <span class="tag">${LABEL[h.label] || '未判定'}・${esc(h.product_id)}・${h.dcg_part > 0 ? '+' + h.dcg_part.toFixed(3) : '0点'}</span>
+        ${h.why ? `<span class="why">${esc(h.why)}</span>` : ''}
+        <p hidden>${esc(h.snippet)}</p></span>
+      <span class="s">${h.score.toFixed(3)}</span>
+    </button>`).join('');
+  document.querySelectorAll('.hit').forEach(el => {
+    const i = +el.dataset.i;
+    el.onmouseenter = () => { if (pinned === null || !document.querySelector('.hit.pin')) { pinned = i; draw(1e9); } };
+    el.onmouseleave = () => { if (!document.querySelector('.hit.pin')) { pinned = null; draw(1e9); } };
+    el.onclick = () => {
+      const was = el.classList.contains('pin');
+      document.querySelectorAll('.hit').forEach(o => { o.classList.remove('pin'); o.querySelector('p').hidden = true; });
+      if (!was) { el.classList.add('pin'); el.querySelector('p').hidden = false; }
+      cancelAnimationFrame(raf); pinned = was ? null : i; draw(1e9);
+    };
+  });
+  play();
+}
+
+function buildChips() {
+  const picks = runs.filter(r => r.group === 'negated').sort((a, b) => b.trap_in_top10 - a.trap_in_top10).slice(0, 4);
+  const row = r => `<button type="button" data-id="${r.query_id}"><span>${esc(r.query)}</span><span>${r.group === 'negated' ? '罠 ' + r.trap_in_top10 + '/10' : 'Exact ' + r.exact_in_top10 + '/10'}</span></button>`;
+  $('chips').innerHTML = picks.map(r => `<button type="button" class="chip" data-id="${r.query_id}">${esc(r.query)}</button>`).join('')
+    + `<button type="button" id="burger" aria-label="質問の一覧" aria-expanded="false">☰ 全${runs.length}問</button>
+       <div id="menu" hidden><h2>否定を含む質問</h2>${runs.filter(r => r.group === 'negated').map(row).join('')}<h2>通常の質問</h2>${runs.filter(r => r.group === 'plain').map(row).join('')}</div>`;
+  $('chips').querySelectorAll('[data-id]').forEach(b => b.onclick = () => select(runs.find(r => r.query_id === +b.dataset.id)));
+  $('burger').onclick = () => { const m = $('menu'); m.hidden = !m.hidden; $('burger').setAttribute('aria-expanded', !m.hidden); };
+}
+
+$('form').onsubmit = e => {
+  e.preventDefault();
+  const q = $('search').value.trim().toLowerCase();
+  const found = runs.find(r => r.query.toLowerCase() === q) || runs.find(r => r.query.toLowerCase().includes(q));
+  if (found) select(found);
+  else { $('phase').textContent = `「${q}」は記録にありません。今は記録済みの${runs.length}問から選べます。`; $('menu').hidden = false; }
+};
+$('replay').onclick = () => { pinned = null; document.querySelectorAll('.hit').forEach(o => { o.classList.remove('pin'); o.querySelector('p').hidden = true; }); play(); };
+
+canvas.addEventListener('pointermove', e => {
+  const rect = canvas.getBoundingClientRect(), mx = e.clientX - rect.left, my = e.clientY - rect.top;
+  let best = -1, bd = 100;
+  map.xy.forEach((p, i) => { const [x, y] = px(p), d = (x - mx) ** 2 + (y - my) ** 2; if (d < bd) { bd = d; best = i; } });
+  const tip = $('tip');
+  if (best < 0) { tip.hidden = true; return; }
+  tip.textContent = map.titles[best]; tip.hidden = false;
+  tip.style.left = Math.min(mx + 12, W - 310 > 0 ? W - 310 : 0) + 'px'; tip.style.top = Math.max(my - 34, 0) + 'px';
+});
+canvas.addEventListener('pointerleave', () => { $('tip').hidden = true; });
+
+Promise.all([fetch('data/map.json').then(r => r.json()), fetch('data/runs.json').then(r => r.json())]).then(([m, r]) => {
+  map = m; runs = r;
+  buildChips();
+  new ResizeObserver(resize).observe($('wrap'));
+  resize();
+  select(runs[0]);
+}).catch(() => { $('phase').textContent = 'データを読み込めませんでした。viewer/data を確認してください。'; });
+</script>
