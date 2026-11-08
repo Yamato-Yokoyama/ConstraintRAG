@@ -4,3 +4,5 @@ data/
 papers/
 tmp/
 .DS_Store
+__pycache__/
+*.py[cod]
