@@ -1,19 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 41883.71it/s]
-captioned 50/585
-captioned 100/585
-captioned 150/585
-captioned 200/585
-captioned 250/585
-captioned 300/585
-captioned 350/585
-captioned 400/585
-captioned 450/585
-captioned 500/585
-captioned 550/585
-{
-  "pairs": 607,
-  "term_in_title": 362,
-  "term_in_caption": 120,
-  "term_in_both": 110
-}
