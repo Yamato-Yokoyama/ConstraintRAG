@@ -87,9 +87,16 @@ The trap floor for this query is 0.4: even a perfect ranking of the judged candi
 Negated queries score much lower than plain ones, and most traps come from ranking rather than from the candidate pool (floor 0.20 vs. actual 0.66).
 
 ### In 30 seconds
-"I measured how well retrieval respects exclusions in negated product-search queries. On 40 ESCI queries, negated queries reached nDCG@10 0.33 versus 0.57 for plain ones, and on average 66% of the top 10 contained the excluded product. Splitting traps into candidate-pool and ranking errors showed that most came from ranking. I tried reranking, but word-match features reward products that mention the excluded term, so it did not help. Next I will try detecting violations by meaning."
+"I measured how well retrieval respects exclusions in negated product-search queries. On 40 ESCI queries, negated queries reached nDCG@10 0.33 versus 0.57 for plain ones, and on average 66% of the top 10 contained the excluded product. Splitting traps into candidate-pool and ranking errors showed that most came from ranking. Next I will try detecting violations by meaning."
 
-## Experiments on top of v0 (not part of the v0 pipeline)
+## Next
+- v1.1: fix the metrics (trap check, binary nDCG, excluded terms in descriptions)
+- v2: detect constraint violations by meaning (LLM / agent) and remove or rerank
+
+## Work in progress: ML experiments (not part of the v0 pipeline)
+
+Early trials added quickly on top of v0. None improved negated queries yet; kept here as notes and will be revisited with more time.
+
 
 ### Constraint layer (`constraint_layer.py`)
 Removes candidates whose image caption contains the excluded term (SQL with bound parameters). Captions were generated with BLIP for the eval-query products only.
@@ -119,10 +126,6 @@ None beat dense retrieval, and the trap rate got worse in A and B: word-match an
 
 ### Image experiments (prototype)
 CLIP attention maps on a few product images; attention often lands on corners and background, so nothing can be concluded yet. Image-based retrieval is a possible later step.
-
-## Next
-- v1.1: fix the metrics (trap check, binary nDCG, excluded terms in descriptions)
-- v2: detect constraint violations by meaning (LLM / agent) and remove or rerank
 
 ## Layout
 - `notebooks/01_eda.ipynb` – exploring negated queries in ESCI
