@@ -1,5 +1,7 @@
 # ConstraintRAG
 
+**English** | [日本語](README.ja.md)
+
 Measuring (and later fixing) how retrieval handles **negated and constrained queries** in product search — e.g. "shampoo without sulfate".
 
 Status: **v1 (baseline evaluation) + v0 (RAG app baseline)** — work in progress, started Oct 2026. This is a personal learning project; the analysis code in the notebooks is written by me. The `app/` code was prototyped with AI assistance (Claude) and is being reviewed and reproduced by me.
