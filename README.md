@@ -2,18 +2,77 @@
 
 Measuring (and later fixing) how retrieval handles **negated and constrained queries** in product search — e.g. "shampoo without sulfate".
 
-Status: **v1 (baseline evaluation)** — work in progress, started Oct 2026. This is a personal learning project; the analysis code in the notebooks is written by me.
+Status: **v1 (baseline evaluation) + v0 (RAG app baseline)** — work in progress, started Oct 2026. This is a personal learning project; the analysis code in the notebooks is written by me. The `app/` code was prototyped with AI assistance (Claude) and is being reviewed and reproduced by me.
 
-## v1 so far
+## v1 so far (notebooks)
 - Data: Amazon Shopping Queries Dataset (ESCI), US locale
 - Retrievers: BM25, dense embeddings (all-MiniLM)
 - Metrics: nDCG@10, top-10 trap rate (negated items that should have been excluded), split into candidate-pool vs. ranking errors
 - Significance tests: Mann-Whitney U, Wilcoxon signed-rank
 
+## v0: RAG app baseline (`app/`)
+A LangGraph pipeline that does **nothing special** about negation, so its failures stay visible as a baseline.
+
+```
+contextualize -> inspect -> retrieve -> generate -> critic -> record_history
+```
+- `contextualize`: rewrites a follow-up query so it can be searched on its own, keeping every exclusion
+- `inspect`: detects negated queries (e.g. "without X", "X-free") with regular expressions and extracts the excluded term
+- `retrieve`: dense search (BGE-M3, ChromaDB) and flags results that still contain the excluded term (`trap`). The ranking is not changed
+- `generate` / `critic`: Gemini answers from the results; the critic marks answers not supported by the evidence (`⚠️ Check:`)
+
+### Evaluation setup
+- 40 eval queries from the ESCI **test** split: 20 negated + 20 plain. The same 40 queries are used for every comparison
+- Corpus: products judged for these queries (~1,000) + 5,000 random ESCI products = 5,992 products. The random products make retrieval closer to a real catalog
+- Metrics: nDCG@10 (ESCI labels; unjudged products count as 0), trap@10, and trap floor (the trap rate that even a perfect ranking of the judged candidates cannot avoid)
+
+### Results (mean over queries)
+| | nDCG@10 negated | nDCG@10 plain | trap@10 |
+|---|---|---|---|
+| v0 dense retrieval | 0.328 | 0.568 | 0.66 (floor 0.20) |
+
+Negated queries score much lower than plain ones, and most traps come from ranking rather than from the candidate pool.
+
+## Experiments on top of v0 (not part of the v0 pipeline)
+### Constraint layer (`constraint_layer.py`)
+Removes candidates whose image caption contains the excluded term (SQL with bound parameters). Captions were generated with BLIP for the eval-query products only.
+- trap@10 0.66 → 0.605 (Wilcoxon p=0.16), nDCG@10 0.328 → 0.348 (p=0.42). Not significant
+- Limitation: substring match, so it ignores negation in the caption ("no hood" is also removed)
+
+### ML reranker (`ml_reranker.py`, `ml_reranker_v2.py`)
+Logistic regression on ESCI train pairs (label: Exact or not), reranking the dense top 100. Features: TF-IDF query–title / query–description matches and words.
+
+| | nDCG@10 negated | nDCG@10 plain | trap@10 |
+|---|---|---|---|
+| dense (v0) | 0.328 | 0.568 | 0.66 |
+| logistic regression (200k pairs) | 0.298 | 0.346 (p=0.0003) | 0.625 |
+| A: + random negatives (100k) | 0.324 | 0.438 (p=0.017) | 0.76 |
+| B: + dense score, 4 features (2k) | 0.300 | 0.558 (p=0.31) | 0.76 (p=0.0015) |
+
+None beat dense retrieval, and the trap rate got worse in A and B: word-match and similarity features reward products that mention the excluded term. A and B also differ in training size, so the causes are not separated yet.
+
+### Image experiments (prototype)
+CLIP attention maps on a few product images; attention often lands on corners and background, so nothing can be concluded yet. Image-based retrieval is a possible later step.
+
+## Next
+- v1.1: fix the metrics (trap check, binary nDCG, excluded terms in descriptions)
+- v2: detect constraint violations by meaning (LLM / agent) and remove or rerank
+
 ## Layout
 - `notebooks/01_eda.ipynb` – exploring negated queries in ESCI
 - `notebooks/02_baseline.ipynb` – BM25 / embedding baselines
 - `notebooks/03_eval.ipynb` – evaluation and significance tests
+- `notebooks/04_v15_rag.ipynb`, `notebooks/05_v11_metrics.ipynb` – trial notebooks
+- `app/src/graph_router.py` – the v0 LangGraph pipeline
+- `app/src/negation.py` – regex negation detection and trap check
+- `app/src/rag_pipeline.py` – embeddings, Chroma index, search, answer generation
+- `app/src/query_rewriting.py` – follow-up query rewriting
+- `app/src/load_esci.py` – corpus and eval-query loading
+- `app/src/metrics.py` – nDCG / recall
+- `app/src/eval_retrieval.py` – v0 retrieval evaluation (no LLM)
+- `app/src/constraint_layer.py`, `eval_constraint_layer.py` – caption-based constraint layer
+- `app/src/ml_reranker.py`, `ml_reranker_v2.py` – ML reranker experiments
+- `app/src/vision/` – image fetching, captions, attention
 - `scripts/download_esci.py` – downloads ESCI into `data/` (not included in this repo)
 
 ## Data and license
